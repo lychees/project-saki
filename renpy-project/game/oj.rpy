@@ -13,29 +13,33 @@ default persistent.vjudge_user = ""
 
 init python:
 
-    import threading
     import time
     import json as _oj_json
-    import ssl as _oj_ssl
-    import urllib.request as _oj_urlreq
-    import urllib.parse as _oj_urlparse
     import webbrowser as _oj_webbrowser
 
-    # Ren'Py 内置 Python 在 Windows 上默认找不到系统 CA 证书，
-    # 使用随引擎分发的 certifi 证书库验证 HTTPS；实在没有才退化为不校验。
-    try:
-        import certifi as _oj_certifi
-        _oj_ssl_ctx = _oj_ssl.create_default_context(cafile=_oj_certifi.where())
-    except Exception:
-        _oj_ssl_ctx = _oj_ssl._create_unverified_context()
+    # Web 平台（Pyodide/Emscripten）不支持可靠的后台线程与网络栈，
+    # 降级为手动确认模式：界面始终显示「我已通过」按钮，轮询不启动。
+    OJ_IS_WEB = renpy.variant("web")
+
+    # ssl / urllib / threading / certifi 为桌面专用：Pyodide 没有 _ssl，
+    # 顶层 import 会直接 ModuleNotFoundError，故只在非 Web 平台导入。
+    if not OJ_IS_WEB:
+        import threading
+        import ssl as _oj_ssl
+        import urllib.request as _oj_urlreq
+        import urllib.parse as _oj_urlparse
+
+        # Ren'Py 内置 Python 在 Windows 上默认找不到系统 CA 证书，
+        # 使用随引擎分发的 certifi 证书库验证 HTTPS；实在没有才退化为不校验。
+        try:
+            import certifi as _oj_certifi
+            _oj_ssl_ctx = _oj_ssl.create_default_context(cafile=_oj_certifi.where())
+        except Exception:
+            _oj_ssl_ctx = _oj_ssl._create_unverified_context()
 
     # ---- 线程私有状态（放在 renpy 模块上，绝不进 store，保证存档兼容）----
     renpy._oj_thread = None
     renpy._oj_stop = False
-
-    # Web 平台（Pyodide/Emscripten）不支持可靠的后台线程与 urllib 轮询，
-    # 降级为手动确认模式：界面始终显示「我已通过」按钮，轮询不启动。
-    OJ_IS_WEB = renpy.variant("web")
 
     OJ_POLL_INTERVAL = 12.0   # 轮询间隔（秒）
     OJ_HTTP_TIMEOUT = 10.0    # 单次请求超时（秒）
