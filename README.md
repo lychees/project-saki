@@ -37,6 +37,9 @@ saki/
 │       ├── images/ audio/  #   素材（复制自 original/assets；images/tex/ 为公式渲染产物）
 │       └── fonts/NotoSansCJKsc-Regular.otf      # 思源黑体（SIL OFL，可商用）
 ├── tools/render_tex.py     # LaTeX 公式离线渲染管线（matplotlib mathtext）
+├── tools/harvest_pool.py   # 竞技场内置题池抓取刷新工具
+├── tools/ascii_rename.py   # 素材文件名 ASCII 化（一次性）
+├── worker/                 # OJ 判题 Cloudflare Worker 代理（src/index.js + wrangler.toml）
 └── .tmp/                   # 提取/生成脚本、Ren'Py SDK、venv（不参与打包）
 ```
 
@@ -62,18 +65,19 @@ saki/
 ## 重制说明
 
 - **做题系统（真实 OJ 提交验证）**：原作课堂习题通过 vjudge API 在线判题、聊天通过
-  rct.ai 生成（后者已失效，聊天功能未重制）。重制版的判题使用**真实的 vjudge 状态
-  API**（已验证可用）：选择题目后进入 OJ 挑战界面，需先在 vjudge.net 注册账号并
-  在弹窗中填入用户名（存于 persistent，之后可在 设置界面 / 挑战界面 随时更换）；
-  点击「打开题目页面」跳转到真实题目，**限时 30 分钟**（`oj.rpy` 中的常量
-  `OJ_TIME_LIMIT`，可按需调整）内提交并获得 Accepted 才算通过——后台线程每约 12 秒
-  轮询一次提交状态（只认挑战开始后新提交的 AC；若检测到你**历史已 AC** 该题，
-  界面会提示并出现「我已通过」直通按钮）。超时或点「放弃挑战」进入未通过分支，
-  可回到题目菜单重试；答过再选会显示原作提示
+  rct.ai 生成（后者已失效，聊天功能未重制）。重制版**全平台**使用真实判题：
+  选择题目后进入 OJ 挑战界面，需先在 vjudge.net 注册账号并填入用户名
+  （存于 persistent，可在 设置界面 / 挑战界面 随时更换）；点击「打开题目页面」
+  跳转真实题目，**限时 30 分钟**（`oj.rpy` 中的常量 `OJ_TIME_LIMIT`）内提交并
+  获得 Accepted 才算通过；答过再选会显示原作提示
   「你已经完成这个题目了哦！去试试其他的题目吧。」，「打完收工」的嘲讽/夸奖分支
   按原作条件（本题组通过数是否为 0）实现。
-  **注意：本功能需要联网**；断网或 API 异常时界面显示「网络异常，正在重试」，
-  不会卡死，可正常存档/读档/放弃。
+  **判题架构**：桌面版后台线程直连 vjudge 状态 API（每约 12 秒轮询，只认挑战
+  开始后新提交的 AC；检测到历史 AC 则开放「我已通过」直通按钮）；Web 版浏览器
+  无法直连 vjudge（API 无 CORS 头），改经自建 **Cloudflare Worker 代理**
+  （`worker/`，见下文「OJ 代理 Worker」），用 `renpy.fetch` 每约 15 秒轮询
+  `/check` 聚合接口。**两端均为自动判题，行为一致**；断网或 API 异常时界面
+  显示「网络异常，正在重试」，不卡死，可正常存档/读档/放弃。
 - **标记映射**：原作 `[pN]` 停顿标记 → Ren'Py `{w=N/20}`；`[@v2001]` 变量插值 →
   Ren'Py 变量 `[exam_group_solved]`；`<span>` 颜色标记（原作全为白色）已剥离。
 - **立绘头像**：原作对话框内的 400×400 立绘头像以 Ren'Py side image 实现，
@@ -159,13 +163,44 @@ kotori "（二项式定理 {tex=(a+b)^n = \\sum_｛k=0｝^｛n｝ \\binom｛n｝
   过滤 Accepted、按 (OJ, 题号) 去重，得到近期有真人 AC 的题池后随机抽 n 道；
   抓取失败或去重题数不足时回退到内置题池 `game/arena_pool.json`
   （可随时运行 `python tools/harvest_pool.py` 刷新，当前内置 32 道）
-- **判题**（桌面版）：后台线程每约 15 秒轮询该用户最近提交，挑战开始后
-  新提交的 Accepted 才算（**历史 AC 不计**，已 AC 过的题需重新提交）；
-  断网显示「网络异常，重试中」，可正常存档/读档（读档后按原 deadline 恢复）
+- **判题**（全平台自动）：每约 15 秒经 Worker `/check` 聚合接口一次判全套题
+  （桌面为后台线程，Web 为 `renpy.fetch`），挑战开始后新提交的 Accepted 才算
+  （**历史 AC 不计**，已 AC 过的题需重新提交）；断网显示「网络异常，重试中」，
+  可正常存档/读档（读档后按原 deadline 恢复）
 - **结算**：全部 AC → 胜利结算（总用时 + OI 风格评价）；超时/放弃 →
   战绩 x/n + 未过题清单
-- **Web 版降级**：无网络栈，使用内置题池抽题、不轮询，每题旁提供
-  「标记通过」手动按钮，其余流程一致
+
+## OJ 代理 Worker（Cloudflare）
+
+浏览器（Web 版游戏）无法直连 vjudge API（无 CORS 头），因此用 Cloudflare
+Worker 做转发代理，代码在 `worker/`：
+
+```
+浏览器(Web 版)  ──fetch──>  saki-oj-proxy.workers.dev  ──>  vjudge.net
+桌面版          ──线程直连──>  vjudge.net（竞技场走 Worker /check 聚合接口）
+```
+
+路由：
+
+- `GET /check?u=<用户>&since=<秒时间戳>&problems=<OJ-题号,...>`：一次判一套题，
+  返回 `{"ok":true,"solved":["POJ-2559",...]}`（仅统计 since 之后的新 AC，≤20 题）
+- `GET /pool`：全站最近 AC 提交流去重题池（竞技场 Web 版实时抽题用）
+- `GET /status?...`：通用透传到 vjudge `/status/data`（兜底）
+
+**部署步骤**（需要 Cloudflare 账号，免费额度足够）：
+
+```bash
+npm install          # 或 npm install -g wrangler
+npx wrangler login
+cd worker
+npx wrangler deploy  # 输出 https://saki-oj-proxy.<account>.workers.dev
+```
+
+然后把 `renpy-project/game/oj.rpy` 顶部的 `OJ_PROXY_BASE`（有 TODO 注释）
+改成部署得到的真实 URL，重新构建 Web 版（`web_build` 到 `docs/`）即可。
+本地联调：`npx wrangler dev`（默认 http://127.0.0.1:8787），把 `OJ_PROXY_BASE`
+临时指到该地址即可。
+
 
 ## 打包发布
 
@@ -181,12 +216,10 @@ Web/桌面构建均可直接使用。
 
 **Web 版与桌面版的差异**：
 
-- **OJ 判题降级**：Web 平台（Pyodide/Emscripten）没有 `_ssl`/网络栈，也无法
-  可靠运行后台线程，桌面专用的 ssl/urllib/threading/certifi 代码已按平台
-  条件导入隔离（Web 完全不加载）。`oj_challenge` 在 Web 上自动降级为
-  **手动确认模式**——轮询不启动，挑战界面始终显示「我已通过」按钮，
-  玩家在 vjudge 提交通过后手动点击继续（桌面版仍为自动轮询判题）。
-  倒计时与放弃分支两端一致。
+- **判题：全平台自动判题，行为一致**。Web 端经 Cloudflare Worker 代理
+  （`OJ_PROXY_BASE`），桌面端剧情模式直连 vjudge、竞技场走 Worker /check；
+  桌面专用的 ssl/urllib/threading/certifi 代码已按平台条件导入隔离
+  （Web 完全不加载，改用 `renpy.fetch`）。
 - 存档保存在浏览器 IndexedDB 中，与桌面版存档不互通。
 - 首次加载需下载约 50MB（game.zip），请耐心等待。
 

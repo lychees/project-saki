@@ -77,10 +77,19 @@ init python:
             store.arena_fetch_status = "fallback"
 
     def _arena_fetch_pool():
-        """开始抽题准备：桌面起线程抓实时池；Web 直接用内置池。"""
+        """开始抽题准备：桌面起线程抓实时池；Web 经 Worker /pool 同步抓取。"""
         store.arena_pool_live = []
         if ARENA_IS_WEB:
-            store.arena_fetch_status = "fallback"
+            # renpy.fetch 在非交互上下文调用（label 流程中），不卡帧
+            try:
+                r = renpy.fetch(store.OJ_PROXY_BASE + "/pool", timeout=10, result="json")
+                if r.get("ok") and len(r.get("pool", [])) >= store.arena_n:
+                    store.arena_pool_live = [[x["oj"], x["prob"]] for x in r["pool"]]
+                    store.arena_fetch_status = "ok"
+                else:
+                    store.arena_fetch_status = "fallback"
+            except Exception:
+                store.arena_fetch_status = "fallback"
             return
         store.arena_fetch_status = "fetching"
         renpy._arena_stop = False
@@ -101,8 +110,9 @@ init python:
         store.arena_problems = [{"oj": oj, "prob": prob, "ac": False} for oj, prob in picked]
         store.arena_start = _arena_time.time()
         store.arena_deadline = store.arena_start + store.arena_limit_min * 60.0
-        store.arena_status = "polling" if not ARENA_IS_WEB else "web"
-        # 启动判题轮询（桌面）
+        store.arena_status = "polling"
+        store.arena_last_poll = 0.0
+        # 启动判题轮询线程（桌面；Web 由 tick 经代理轮询）
         if not ARENA_IS_WEB:
             renpy._arena_stop = False
             th = _arena_threading.Thread(target=_arena_poll_loop)
@@ -111,22 +121,23 @@ init python:
             th.start()
         return True
 
-    # ---- 判题轮询（桌面；竞技场为限时挑战，历史 AC 不算）----
+    # ---- 判题轮询（桌面；经 Worker /check 聚合接口一次判全套题。
+    #      竞技场为限时挑战，历史 AC 不算）----
     def _arena_poll_loop():
         while not renpy._arena_stop:
             try:
                 q = _arena_urlparse.urlencode({
-                    "draw": 1, "start": 0, "length": 20,
-                    "un": renpy.store.persistent.vjudge_user})
-                data = _arena_get("https://vjudge.net/status/data?" + q)
-                wanted = {(p["oj"], p["prob"]) for p in store.arena_problems if not p["ac"]}
-                for row in data.get("data", []):
-                    key = (row.get("oj"), str(row.get("probNum")))
-                    if key in wanted and row.get("status") == "Accepted":
-                        if (row.get("time") or 0) / 1000.0 >= store.arena_start - 5:
-                            for p in store.arena_problems:
-                                if (p["oj"], p["prob"]) == key:
-                                    p["ac"] = True
+                    "u": renpy.store.persistent.vjudge_user,
+                    "since": int(store.arena_start - 5),
+                    "problems": ",".join(
+                        "{}-{}".format(p["oj"], p["prob"]) for p in store.arena_problems)})
+                data = _arena_get(store.OJ_PROXY_BASE + "/check?" + q)
+                if not data.get("ok"):
+                    raise ValueError("proxy error: {}".format(data.get("error")))
+                solved = set(data.get("solved", []))
+                for p in store.arena_problems:
+                    if not p["ac"] and "{}-{}".format(p["oj"], p["prob"]) in solved:
+                        p["ac"] = True
                 store.arena_status = "polling"
             except Exception:
                 store.arena_status = "neterr"
@@ -157,31 +168,36 @@ init python:
         st = store.arena_status
         if st == "neterr":
             return "网络异常，重试中……"
-        if st == "web":
-            return "Web 版：提交通过后请手动点击对应题目的「标记通过」。"
         return "判题轮询中……（每 {} 秒）".format(int(ARENA_POLL_INTERVAL))
 
     def _arena_open_problem(p):
         _oj_webbrowser.open("https://vjudge.net/problem/{}-{}".format(p["oj"], p["prob"]))
 
-    def _arena_mark_ac(p):
-        p["ac"] = True
-
     def _arena_tick():
-        """主界面定时器（主线程）：刷新、判胜负、恢复线程。"""
+        """主界面定时器（主线程）：刷新、判胜负、轮询/恢复判题。"""
         # 调试钩子（测试用）
         dbg = getattr(renpy.store, "_arena_debug_result", None)
         if dbg:
             renpy.end_interaction(dbg)
             return
-        if _arena_ac_count() >= len(store.arena_problems):
-            renpy.end_interaction("win")
-            return
-        if _arena_remaining() <= 0:
-            renpy.end_interaction("timeout")
-            return
-        # 读档后线程丢失 -> 恢复（桌面）
-        if not ARENA_IS_WEB:
+        if ARENA_IS_WEB:
+            # Web：经 Worker /check 聚合判题（主线程 fetch，非后台线程）
+            now = _arena_time.time()
+            if now - store.arena_last_poll >= ARENA_POLL_INTERVAL:
+                store.arena_last_poll = now
+                wanted = [(p["oj"], p["prob"]) for p in store.arena_problems if not p["ac"]]
+                if wanted:
+                    solved = _oj_proxy_check(
+                        persistent.vjudge_user, store.arena_start - 5, wanted)
+                    if solved is None:
+                        store.arena_status = "neterr"
+                    else:
+                        store.arena_status = "polling"
+                        for p in store.arena_problems:
+                            if not p["ac"] and "{}-{}".format(p["oj"], p["prob"]) in solved:
+                                p["ac"] = True
+        else:
+            # 读档后线程丢失 -> 恢复（桌面）
             th = getattr(renpy, "_arena_thread", None)
             if th is None or not th.is_alive():
                 renpy._arena_stop = False
@@ -189,6 +205,12 @@ init python:
                 th.daemon = True
                 renpy._arena_thread = th
                 th.start()
+        if _arena_ac_count() >= len(store.arena_problems):
+            renpy.end_interaction("win")
+            return
+        if _arena_remaining() <= 0:
+            renpy.end_interaction("timeout")
+            return
         renpy.restart_interaction()
 
     def _arena_fetch_tick():
@@ -242,12 +264,11 @@ screen arena_setup_screen():
                 text "[arena_limit_min] 分钟" size 24 yalign 0.5
                 textbutton "＋" action SetVariable("arena_limit_min", min(120, arena_limit_min + 30)) text_size 24
 
-            if not ARENA_IS_WEB:
-                hbox:
-                    spacing 16
-                    xalign 0.5
-                    text "vjudge 账号" size 20 yalign 0.5
-                    textbutton "[persistent.vjudge_user or '未设置（点击设置）']" action Show("oj_username_input") text_size 20
+            hbox:
+                spacing 16
+                xalign 0.5
+                text "vjudge 账号" size 20 yalign 0.5
+                textbutton "[persistent.vjudge_user or '未设置（点击设置）']" action Show("oj_username_input") text_size 20
 
             hbox:
                 spacing 30
@@ -311,8 +332,6 @@ screen arena_screen():
                         text "✘" size 26 color "#f66" yalign 0.5
                     text "[p['oj']]-[p['prob']]" size 24 yalign 0.5
                     textbutton "打开题目页面" action Function(_arena_open_problem, p) text_size 18 yalign 0.5
-                    if ARENA_IS_WEB and not p["ac"]:
-                        textbutton "标记通过" action Function(_arena_mark_ac, p) text_size 18 yalign 0.5
 
             null height 10
 
@@ -355,23 +374,20 @@ screen arena_result_screen(victory):
 label arena_setup:
 
     scene black with dissolve
-
     call screen arena_setup_screen
     if _return == "back":
         return
 
-    # 桌面版需要 vjudge 账号用于判题轮询
-    if not ARENA_IS_WEB:
-        while not persistent.vjudge_user:
-            call screen oj_username_input
-            if not persistent.vjudge_user:
-                menu:
-                    "竞技场需要 vjudge 账号来自动判题。"
-                    "再试一次":
-                        pass
-                    "返回主菜单":
-                        return
-
+    # 全平台判题都需要 vjudge 账号
+    while not persistent.vjudge_user:
+        call screen oj_username_input_modal
+        if not persistent.vjudge_user:
+            menu:
+                "竞技场需要 vjudge 账号来自动判题。"
+                "再试一次":
+                    pass
+                "返回主菜单":
+                    return
     $ _arena_fetch_pool()
     call screen arena_fetching_screen
 
@@ -380,7 +396,7 @@ label arena_setup:
         "题池为空……请检查网络后重试。（可运行 tools/harvest_pool.py 刷新内置题池）"
         return
 
-    if store.arena_fetch_status == "fallback" and not ARENA_IS_WEB:
+    if store.arena_fetch_status == "fallback":
         "（实时题池获取失败或题数不足，已改用内置题池。）"
 
     call screen arena_screen

@@ -9,6 +9,11 @@
 
 define OJ_TIME_LIMIT = 30  # 每题时间限制（分钟），集中定义便于调整
 
+# Cloudflare Worker 代理（浏览器无法直连 vjudge API——无 CORS 头）。
+# Web 端经由此代理判题；桌面竞技场也走 /check 聚合接口。
+# 本地联调时临时改为 http://127.0.0.1:8787 （wrangler dev）
+define OJ_PROXY_BASE = "https://saki-oj-proxy.lychees-saki.workers.dev"
+
 default persistent.vjudge_user = ""
 
 init python:
@@ -17,9 +22,27 @@ init python:
     import json as _oj_json
     import webbrowser as _oj_webbrowser
 
-    # Web 平台（Pyodide/Emscripten）不支持可靠的后台线程与网络栈，
-    # 降级为手动确认模式：界面始终显示「我已通过」按钮，轮询不启动。
+    # Web 平台（Pyodide/Emscripten）不支持可靠的后台线程与网络栈：
+    # 桌面走后台线程直连 vjudge；Web 走 renpy.fetch -> Cloudflare Worker 代理。
     OJ_IS_WEB = renpy.variant("web")
+
+    def _oj_proxy_check(user, since, problems):
+        """通过 Worker /check 一次判一批题。
+        problems: [(oj, prob), ...]；返回 {"OJ-prob", ...} 集合，出错返回 None。
+        renpy.fetch 全平台可用（Web 端为浏览器 fetch，CORS 由 Worker 提供）。"""
+        if not user or not problems:
+            return None
+        plist = ",".join("{}-{}".format(o, p) for o, p in problems)
+        try:
+            r = renpy.fetch(
+                store.OJ_PROXY_BASE + "/check",
+                params={"u": user, "since": int(since), "problems": plist},
+                timeout=8, result="json")
+            if r.get("ok"):
+                return set(r.get("solved", []))
+        except Exception:
+            pass
+        return None
 
     # ssl / urllib / threading / certifi 为桌面专用：Pyodide 没有 _ssl，
     # 顶层 import 会直接 ModuleNotFoundError，故只在非 Web 平台导入。
@@ -94,7 +117,7 @@ init python:
                 time.sleep(0.1)
 
     def _oj_setup(oj, prob, minutes):
-        """主线程调用：初始化挑战状态并启动轮询线程（Web 平台跳过线程）。"""
+        """主线程调用：初始化挑战状态并启动轮询（桌面起线程；Web 由 tick 轮询代理）。"""
         renpy._oj_stop = True
         renpy._oj_thread = None
         store._oj_oj = oj
@@ -103,8 +126,11 @@ init python:
         store._oj_deadline = time.time() + minutes * 60.0
         store._oj_ac = False
         store._oj_hist_ac = False
-        store._oj_status = "web" if OJ_IS_WEB else "polling"
+        store._oj_status = "polling"
         if OJ_IS_WEB:
+            # Web：fetch 轮询状态（主线程 tick 驱动，非后台线程）
+            store._oj_last_poll = 0.0
+            store._oj_hist_checked = False
             return
         renpy._oj_stop = False
         th = threading.Thread(target=_oj_poll_loop, args=(store._oj_start,))
@@ -131,21 +157,44 @@ init python:
             return "网络异常，正在重试……"
         if st == "nouser":
             return "未设置 vjudge 用户名，请先设置账号。"
-        if st == "web":
-            return "Web 版无法自动判题：在 vjudge 提交通过（Accepted）后，请手动点击「我已通过」。"
         if store._oj_hist_ac:
             return "检测到你此前已通过此题（历史提交）。"
         return "正在轮询提交状态……（每 {} 秒刷新）".format(int(OJ_POLL_INTERVAL))
 
     def _oj_tick():
-        """界面定时器回调（主线程）：刷新界面、判胜负、必要时重启轮询线程。"""
+        """界面定时器回调（主线程）：刷新界面、判胜负、轮询/恢复判题。"""
         # 调试钩子：store._oj_debug_result 设为 "pass"/"fail" 时直接分出胜负（测试用）
         dbg = getattr(renpy.store, "_oj_debug_result", None)
         if dbg:
             renpy.end_interaction(dbg)
             return
-        # 读档等情况下线程丢失且未分胜负 -> 用存档中的参数恢复轮询（Web 平台无需）
-        if not OJ_IS_WEB and not store._oj_ac and _oj_remaining() > 0:
+        if OJ_IS_WEB:
+            # Web：先查历史 AC（仅首开直通按钮），再按挑战开始时间判新提交
+            if not store._oj_hist_checked and time.time() - store._oj_last_poll >= OJ_POLL_INTERVAL:
+                store._oj_last_poll = time.time()
+                solved = _oj_proxy_check(persistent.vjudge_user, 0,
+                                         [(store._oj_oj, store._oj_prob)])
+                store._oj_hist_checked = True
+                if solved is None:
+                    store._oj_status = "neterr"
+                else:
+                    store._oj_status = "polling"
+                    key = "{}-{}".format(store._oj_oj, store._oj_prob)
+                    if key in solved:
+                        store._oj_hist_ac = True
+            elif store._oj_hist_checked and time.time() - store._oj_last_poll >= OJ_POLL_INTERVAL:
+                store._oj_last_poll = time.time()
+                solved = _oj_proxy_check(persistent.vjudge_user, store._oj_start - 5,
+                                         [(store._oj_oj, store._oj_prob)])
+                if solved is None:
+                    store._oj_status = "neterr"
+                else:
+                    store._oj_status = "polling"
+                    key = "{}-{}".format(store._oj_oj, store._oj_prob)
+                    if key in solved:
+                        store._oj_ac = True
+        elif not store._oj_ac and _oj_remaining() > 0:
+            # 读档等情况下线程丢失且未分胜负 -> 用存档中的参数恢复轮询
             th = getattr(renpy, "_oj_thread", None)
             if th is None or not th.is_alive():
                 renpy._oj_stop = False
@@ -166,21 +215,43 @@ init python:
 
 
 # ---- 用户名设置界面（首次挑战前自动弹出，也可随时从设置界面进入）----
+# 注意：oj_username_input（Show 模式，Hide 关闭）用于设置/挑战/竞技场界面的
+# 弹窗；oj_username_input_modal（call screen 模式）用于必须等待输入完成的
+# 流程——Web 端 call screen + Hide 不会结束交互（实测踩坑），故用
+# 定时器 + Return 保证返回。
+
+screen oj_username_body(call_mode):
+    vbox:
+        spacing 16
+        text "请输入你的 vjudge 用户名：" size 26
+        text "（用于验证你的 OJ 提交；没有账号请先到 vjudge.net 注册）" size 18 color "#aaa"
+        input value FieldInputValue(persistent, "vjudge_user") length 32 size 28
+        if call_mode:
+            textbutton "确定" action Return(False) xalign 0.5
+        else:
+            textbutton "确定" action Hide("oj_username_input") xalign 0.5
+
 screen oj_username_input():
     modal True
     zorder 200
     add Solid("#000a")
-
     frame:
         xalign 0.5
         yalign 0.5
         padding (40, 30)
-        vbox:
-            spacing 16
-            text "请输入你的 vjudge 用户名：" size 26
-            text "（用于验证你的 OJ 提交；没有账号请先到 vjudge.net 注册）" size 18 color "#aaa"
-            input value FieldInputValue(persistent, "vjudge_user") length 32 size 28
-            textbutton "确定" action Hide("oj_username_input") xalign 0.5
+        use oj_username_body(False)
+
+screen oj_username_input_modal():
+    modal True
+    zorder 200
+    add Solid("#000a")
+    # 注意：Web 端 call screen + Hide 不会结束交互（实测踩坑），
+    # 所以「确定」必须用 Return 而非 Hide，保证 call screen 一定返回。
+    frame:
+        xalign 0.5
+        yalign 0.5
+        padding (40, 30)
+        use oj_username_body(True)
 
 
 # ---- OJ 挑战界面 ----
@@ -214,8 +285,8 @@ screen oj_challenge_screen():
                 spacing 20
                 xalign 0.5
                 textbutton "打开题目页面" action Function(_oj_open_problem) text_size 22
-                # 历史 AC 或 Web 降级模式下，允许手动确认通过
-                if store._oj_hist_ac or OJ_IS_WEB:
+                # 历史 AC（任意平台）允许手动直通
+                if store._oj_hist_ac:
                     textbutton "我已通过" action Return("pass") text_size 22
                 textbutton "更换账号" action Show("oj_username_input") text_size 22
                 textbutton "放弃挑战" action Return("fail") text_size 22
@@ -235,7 +306,7 @@ screen oj_challenge_screen():
 label oj_challenge(oj, prob, time_limit_min, pass_label, fail_label):
 
     while not persistent.vjudge_user:
-        call screen oj_username_input
+        call screen oj_username_input_modal
         if not persistent.vjudge_user:
             menu:
                 "未设置 vjudge 账号，无法进行 OJ 验证。"
