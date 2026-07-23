@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 ## Initialization
 ################################################################################
 
@@ -98,16 +98,18 @@ define gui.game_menu_background = "gui/game_menu.png"
 ## at a time.
 
 ## The height of the textbox containing dialogue.
-define gui.textbox_height = gui.scale(185)
+## 加高到 262：按 22px 字号可容纳 4 行正文（约 31px 行高），
+## 并整体上移（yalign 0.91）与底部 quick menu 留出间隙。
+define gui.textbox_height = gui.scale(262)
 
 ## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
 ## center, and 1.0 is the bottom.
-define gui.textbox_yalign = 1.0
+define gui.textbox_yalign = 0.91
 
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = gui.scale(240)
+define gui.name_xpos = gui.scale(280)
 define gui.name_ypos = gui.scale(0)
 
 ## The horizontal alignment of the character's name. This can be 0.0 for
@@ -131,7 +133,7 @@ define gui.namebox_tile = False
 ## The placement of dialogue relative to the textbox. These can be a whole
 ## number of pixels relative to the left or top side of the textbox, or 0.5
 ## to center.
-define gui.dialogue_xpos = gui.scale(268)
+define gui.dialogue_xpos = gui.scale(280)
 define gui.dialogue_ypos = gui.scale(50)
 
 ## The maximum width of dialogue text, in pixels.

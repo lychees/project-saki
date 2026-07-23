@@ -186,6 +186,32 @@ Worker 做转发代理，代码在 `worker/`：
   返回 `{"ok":true,"solved":["POJ-2559",...]}`（仅统计 since 之后的新 AC，≤20 题）
 - `GET /pool`：全站最近 AC 提交流去重题池（竞技场 Web 版实时抽题用）
 - `GET /status?...`：通用透传到 vjudge `/status/data`（兜底）
+- `GET /profile?cf=<handle>&atc=<user>&luogu=<uid>&vj=<user>`：选手档案聚合
+  （并行抓取，单平台失败不影响其他）：Codeforces 官方 API（rating/maxRating/rank +
+  按 problem.tags 统计的 AC 题数，取样最近 10000 提交）；AtCoder 官方
+  history/json（rating + 历史，**atcoder.jp 封锁数据中心 IP，经 r.jina.ai 回退，
+  可能被限流而显示"暂未获取"**）；Luogu 用户页（__client_id cookie 反爬两次握手 +
+  内嵌数据提取：name/ranking/ccfLevel/通过数）；vjudge 无用户接口，仅统计最近
+  100 条提交窗口的 AC 数并注明"仅近期"
+
+## 选手档案（Player Profile）
+
+主菜单「选手档案」入口。先在 Preferences →「账号绑定（CF / AtCoder / 洛谷 /
+vjudge）」或面板上的「账号绑定」按钮绑定各平台账号（洛谷填数字 UID），
+然后经 Worker `/profile` 聚合查询并显示：
+
+- **rating 卡片**：Codeforces 按段位着色（灰<1200 绿<1400 青<1600 蓝<1900
+  紫<2100 橙<2400 红≥2400）+ max rating + rank；AtCoder 类似日站配色 + highest；
+  Luogu 显示 ccfLevel / 排名 / 通过数；vjudge 显示近期窗口 AC 数。
+  获取失败的平台显示「暂未获取」。
+- **技能雷达图**（Ren'Py Creator-Defined Displayable，canvas 绘制）：8 个技能轴
+  （数学/动态规划/图论/贪心/搜索/数据结构/字符串/暴力模拟），5 层虚线等级环 +
+  半透明技能多边形；轴等级由 CF tag 的 AC 题数分档
+  （0 题=0，1-2=1，3-6=2，7-15=3，16-30=4，>30=5）。
+- 结果缓存于 persistent（带时间戳），「刷新」按钮手动更新；
+  桌面走后台线程、Web 走 `renpy.fetch` 同步查询（同一套双端模式）。
+- 历史 rating 折线图暂未实现（数据已有：/profile 的 atc.history），留作后续。
+
 
 **部署步骤**（需要 Cloudflare 账号，免费额度足够）：
 

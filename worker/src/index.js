@@ -1,12 +1,13 @@
 // saki-oj-proxy — Cloudflare Worker
-// 浏览器(Web 版游戏) -> 本 Worker -> vjudge.net
-// 解决 vjudge API 无 CORS 头导致浏览器无法直连的问题。
+// 浏览器(Web 版游戏) -> 本 Worker -> vjudge.net / codeforces.com / atcoder.jp / luogu.com.cn
+// 解决各 OJ API 无 CORS 头导致浏览器无法直连的问题。
 
 const VJ_STATUS = "https://vjudge.net/status/data";
 const VJ_HEADERS = {
   "User-Agent": "Mozilla/5.0",
   "X-Requested-With": "XMLHttpRequest",
 };
+const UA_HEADERS = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" };
 
 function corsHeaders(extra = {}) {
   return {
@@ -113,6 +114,206 @@ async function handleStatus(url) {
   });
 }
 
+// ---------------- /profile：选手档案聚合 ----------------
+
+const CF_SUBMISSION_SAMPLE = 10000; // user.status 取样上限（tag 统计在 Worker 端完成）
+
+async function fetchCf(handle) {
+  const infoResp = await fetch(
+    `https://codeforces.com/api/user.info?handles=${encodeURIComponent(handle)}`,
+    { headers: UA_HEADERS }
+  );
+  const info = await infoResp.json();
+  if (info.status !== "OK" || !info.result || !info.result[0]) {
+    return { available: false };
+  }
+  const u = info.result[0];
+
+  // 提交记录 -> tag 统计（verdict==OK，按 contestId+index 去重）
+  const tags = {};
+  let sampled = 0;
+  try {
+    const stResp = await fetch(
+      `https://codeforces.com/api/user.status?handle=${encodeURIComponent(handle)}&from=1&count=${CF_SUBMISSION_SAMPLE}`,
+      { headers: UA_HEADERS }
+    );
+    const st = await stResp.json();
+    if (st.status === "OK" && Array.isArray(st.result)) {
+      const seen = new Set();
+      for (const sub of st.result) {
+        if (sub.verdict !== "OK" || !sub.problem) continue;
+        const key = `${sub.problem.contestId}|${sub.problem.index}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        sampled++;
+        for (const t of sub.problem.tags || []) {
+          tags[t] = (tags[t] || 0) + 1;
+        }
+      }
+    }
+  } catch (e) {
+    // tag 统计失败不阻塞 rating
+  }
+
+  return {
+    available: true,
+    rating: u.rating ?? null,
+    maxRating: u.maxRating ?? null,
+    rank: u.rank ?? null,
+    maxRank: u.maxRank ?? null,
+    tags,
+    sampled,
+  };
+}
+
+async function fetchAtcJson(user) {
+  const url = `https://atcoder.jp/users/${encodeURIComponent(user)}/history/json`;
+  let resp = await fetch(url, { headers: UA_HEADERS });
+  if (resp.status === 403) {
+    // AtCoder 封锁数据中心 IP：经 r.jina.ai 读取（返回内嵌 JSON 的 markdown）
+    resp = await fetch(`https://r.jina.ai/${url}`, { headers: UA_HEADERS });
+    if (resp.ok) {
+      const text = await resp.text();
+      const i = text.indexOf("[");
+      if (i >= 0) {
+        return new Response(text.slice(i), { status: 200 });
+      }
+    }
+  }
+  return resp;
+}
+
+async function fetchAtc(user) {
+  const resp = await fetchAtcJson(user);
+  if (!resp.ok) {
+    return { available: false, debug: "atcoder.jp 当前拒绝数据中心/公共代理访问 (http " + resp.status + ")" };
+  }
+  const hist = await resp.json();
+  if (!Array.isArray(hist) || hist.length === 0) return { available: false, debug: "no history" };
+  const history = hist.map((h) => [h.Date, h.NewRating]);
+  const latest = hist[hist.length - 1];
+  let highest = 0;
+  for (const h of hist) if (h.NewRating > highest) highest = h.NewRating;
+  return {
+    available: true,
+    rating: latest.NewRating ?? null,
+    highest,
+    history,
+  };
+}
+
+// Luogu 有 __client_id cookie 反爬：先取 cookie 再带 cookie 重试。
+// 数据内嵌在 HTML 中（_contentOnly 的 JSON 形式对数据中心 IP 常失效），用正则提取字段。
+async function luoguHttp(url, headers) {
+  let resp = await fetch(url, { headers, redirect: "manual" });
+  if (resp.status === 302 || resp.status === 301) {
+    let cookies = [];
+    try {
+      cookies = resp.headers.getSetCookie().map((c) => c.split(";")[0]);
+    } catch (e) {
+      const sc = resp.headers.get("set-cookie");
+      if (sc) cookies = sc.split(",").map((c) => c.split(";")[0]);
+    }
+    resp = await fetch(url, {
+      headers: { ...headers, Cookie: cookies.join("; ") },
+      redirect: "manual",
+    });
+  }
+  return resp;
+}
+
+async function fetchLuogu(uid) {
+  if (!/^\d+$/.test(uid)) return { available: false };
+  try {
+    const resp = await luoguHttp(
+      `https://www.luogu.com.cn/user/${uid}?_contentOnly=1`,
+      UA_HEADERS
+    );
+    if (!resp.ok) return { available: false, debug: "http " + resp.status };
+    const text = await resp.text();
+
+    // 优先 _contentOnly JSON
+    let user = null;
+    try {
+      const data = JSON.parse(text);
+      user = data.currentData && data.currentData.user;
+    } catch (e) {
+      user = null;
+    }
+
+    // 回退：从 HTML 内嵌数据提取（用户对象 "user":{...} 为扁平结构）
+    let scope = text;
+    const um = text.match(/"user":\{([^}]*"registerTime"[^}]*)\}/);
+    if (um) scope = um[1];
+    function fieldNum(name) {
+      const m = scope.match(new RegExp('"' + name + '":(\\d+|null)'));
+      if (!m || m[1] === "null") return null;
+      return parseInt(m[1], 10);
+    }
+    function fieldStr(name) {
+      const m = scope.match(new RegExp('"' + name + '":"((?:[^"\\\\]|\\\\.)*)"'));
+      return m ? m[1] : null;
+    }
+    const out = {
+      available: true,
+      name: (user && user.name) || fieldStr("name"),
+      ranking: (user && user.ranking) ?? fieldNum("ranking"),
+      ccfLevel: (user && user.ccfLevel) ?? fieldNum("ccfLevel"),
+      passedProblemCount:
+        (user && user.passedProblemCount) ?? fieldNum("passedProblemCount"),
+      elo: (user && (user.eloValue ?? user.elo)) ?? fieldNum("eloValue"),
+    };
+    if (!out.name && out.ranking == null && out.passedProblemCount == null) {
+      return { available: false, debug: "parse failed" };
+    }
+    return out;
+  } catch (e) {
+    return { available: false, debug: String(e && e.message ? e.message : e).slice(0, 120) };
+  }
+}
+
+async function fetchVj(user) {
+  // vjudge 无用户信息接口：只能统计最近窗口的 AC 数（注明"仅近期"）
+  try {
+    const data = await vjudgeStatus({ draw: 1, start: 0, length: 100, un: user });
+    let ac = 0;
+    const seen = new Set();
+    for (const row of data.data || []) {
+      if (row.status !== "Accepted") continue;
+      const key = `${row.oj}|${row.probNum}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      ac++;
+    }
+    return { available: true, recentAc: ac, recentOnly: true };
+  } catch (e) {
+    return { available: false };
+  }
+}
+
+// GET /profile?cf=<handle>&atc=<user>&luogu=<uid>&vj=<user>
+async function handleProfile(url) {
+  const cf = (url.searchParams.get("cf") || "").slice(0, 64);
+  const atc = (url.searchParams.get("atc") || "").slice(0, 64);
+  const luogu = (url.searchParams.get("luogu") || "").slice(0, 16);
+  const vj = (url.searchParams.get("vj") || "").slice(0, 64);
+  if (!cf && !atc && !luogu && !vj) {
+    return json({ ok: false, error: "no handles given" }, 400);
+  }
+
+  const jobs = {};
+  if (cf) jobs.cf = fetchCf(cf).catch(() => ({ available: false }));
+  if (atc) jobs.atc = fetchAtc(atc).catch(() => ({ available: false }));
+  if (luogu) jobs.luogu = fetchLuogu(luogu).catch(() => ({ available: false }));
+  if (vj) jobs.vj = fetchVj(vj).catch(() => ({ available: false }));
+
+  const names = Object.keys(jobs);
+  const results = await Promise.all(names.map((n) => jobs[n]));
+  const out = { ok: true };
+  names.forEach((n, i) => (out[n] = results[i]));
+  return json(out);
+}
+
 export default {
   async fetch(request) {
     const url = new URL(request.url);
@@ -132,6 +333,8 @@ export default {
           return await handlePool(url);
         case "/status":
           return await handleStatus(url);
+        case "/profile":
+          return await handleProfile(url);
         default:
           return json({ ok: false, error: "not found" }, 404);
       }

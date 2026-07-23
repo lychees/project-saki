@@ -303,6 +303,8 @@ screen navigation():
 
             textbutton "竞技场" action Start("arena_setup")
 
+            textbutton "选手档案" action Start("player_profile")
+
             if persistent.dev_mode:
                 textbutton "开发者跳转" action Show("dev_jump")
 
@@ -766,13 +768,16 @@ screen preferences():
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be added here, to
                 ## add additional creator-defined preferences.
 
-                vbox:
-                    style_prefix "radio"
-                    label "vjudge 账号（OJ 验证用）"
-                    textbutton "[persistent.vjudge_user or '未设置（点击设置）']" action Show("oj_username_input")
+            ## 自定义项独占一行（修复之前右侧两栏文字超出屏幕的排版问题）
+            hbox:
+                style_prefix "check"
+                box_wrap True
 
                 vbox:
-                    style_prefix "check"
+                    label "账号"
+                    textbutton "账号绑定（CF / AtCoder / 洛谷 / vjudge）" action Show("account_binding")
+
+                vbox:
                     label "开发者模式"
                     textbutton "开启（Shift+K 呼出开发者跳转）" action ToggleField(persistent, "dev_mode")
 
