@@ -1,5 +1,8 @@
 # 天才算法少女 · Ren'Py 重制版
 
+> **在线试玩（Web 版）**：https://lychees.github.io/project-saki/
+> **仓库地址**：https://github.com/lychees/project-saki
+
 OI / 信息学竞赛题材 galgame《天才算法少女》的 Ren'Py 重制工程。
 
 - **原作**：GameCreator 平台作品《天才算法少女》，作者 **岛娘岛娘岛**
@@ -148,8 +151,23 @@ kotori "（二项式定理 {tex=(a+b)^n = \\sum_｛k=0｝^｛n｝ \\binom｛n｝
 ## 打包发布
 
 启动器中选择「生成分发版」即可打包 Windows/Mac/Linux 版。
-注意：素材文件名保留了原作的中文/空格命名（Ren'Py 桌面端支持），
-如需发布 Web/Android 版建议先将文件重命名为 ASCII。
+素材文件名已全部 ASCII 化（tools/ascii_rename.py 一次性完成并重写引用），
+Web/桌面构建均可直接使用。
+
+### Web 版（GitHub Pages）
+
+`docs/` 目录是 Ren'Py Web 构建产物（`renpy.exe launcher web_build renpy-project
+--destination docs`，需 SDK 的 web 支持组件），通过 GitHub Pages
+（main 分支 /docs）发布到 https://lychees.github.io/project-saki/ 。
+
+**Web 版与桌面版的差异**：
+
+- **OJ 判题降级**：Web 平台（Pyodide/Emscripten）无法可靠运行后台线程与
+  urllib 轮询，`oj_challenge` 在 Web 上自动降级为**手动确认模式**——
+  轮询不启动，挑战界面始终显示「我已通过」按钮，玩家在 vjudge 提交通过后
+  手动点击继续（桌面版仍为自动轮询判题）。倒计时与放弃分支两端一致。
+- 存档保存在浏览器 IndexedDB 中，与桌面版存档不互通。
+- 首次加载需下载约 50MB（game.zip），请耐心等待。
 
 ## 版权说明
 
