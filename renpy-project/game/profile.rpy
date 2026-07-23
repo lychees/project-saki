@@ -345,12 +345,13 @@ screen player_profile_screen():
             xalign 0.5
             spacing 14
 
-            if _cf.get("available"):
+            if _cf.get("available") and _cf.get("rating") is not None:
                 use profile_card("Codeforces", platform="cf", handle=persistent.cf_user, body_lines=[
                     ("rating", "#9ab", 16),
                     (str(_cf.get("rating")), _cf_color(_cf.get("rating")), 40),
                     ("max " + str(_cf.get("maxRating")) + "  " + str(_cf.get("rank")), "#9ab", 15)])
             else:
+                # available 但 rating 为 null（上游瞬时异常）按暂未获取显示
                 use profile_card("Codeforces", platform="cf", handle=persistent.cf_user, body_lines=[
                     ("暂未获取", "#888", 24),
                     (persistent.cf_user or "未绑定", "#666", 15)])
