@@ -183,23 +183,48 @@ async function fetchAtcJson(user) {
   return resp;
 }
 
-async function fetchAtc(user) {
-  const resp = await fetchAtcJson(user);
-  if (!resp.ok) {
-    return { available: false, debug: "atcoder.jp 当前拒绝数据中心/公共代理访问 (http " + resp.status + ")" };
-  }
-  const hist = await resp.json();
-  if (!Array.isArray(hist) || hist.length === 0) return { available: false, debug: "no history" };
-  const history = hist.map((h) => [h.Date, h.NewRating]);
-  const latest = hist[hist.length - 1];
-  let highest = 0;
-  for (const h of hist) if (h.NewRating > highest) highest = h.NewRating;
+// kenkoooo (AtCoder Problems) — 稳定的替代指标源（Rated Point Sum / AC 数）
+async function fetchAtcKenkoooo(user) {
+  const resp = await fetch(
+    `https://kenkoooo.com/atcoder/atcoder-api/v2/user_info?user=${encodeURIComponent(user)}`,
+    { headers: UA_HEADERS }
+  );
+  if (!resp.ok) return { available: false, debug: "kenkoooo http " + resp.status };
+  const d = await resp.json();
+  if (!d || !d.user_id) return { available: false, debug: "kenkoooo no user" };
   return {
     available: true,
-    rating: latest.NewRating ?? null,
-    highest,
-    history,
+    source: "kenkoooo",
+    rating: null,
+    ratedPointSum: d.rated_point_sum ?? null,
+    ratedPointSumRank: d.rated_point_sum_rank ?? null,
+    acceptedCount: d.accepted_count ?? null,
+    acceptedCountRank: d.accepted_count_rank ?? null,
   };
+}
+
+async function fetchAtc(user) {
+  // 1) 直连 / 2) r.jina.ai 回退（拿真实 rating+历史） 3) kenkoooo 兜底指标
+  const resp = await fetchAtcJson(user);
+  if (resp.ok) {
+    try {
+      const hist = await resp.json();
+      if (Array.isArray(hist) && hist.length > 0) {
+        const history = hist.map((h) => [h.Date, h.NewRating]);
+        const latest = hist[hist.length - 1];
+        let highest = 0;
+        for (const h of hist) if (h.NewRating > highest) highest = h.NewRating;
+        return {
+          available: true,
+          source: "atcoder",
+          rating: latest.NewRating ?? null,
+          highest,
+          history,
+        };
+      }
+    } catch (e) { /* fall through to kenkoooo */ }
+  }
+  return fetchAtcKenkoooo(user);
 }
 
 // Luogu 有 __client_id cookie 反爬：先取 cookie 再带 cookie 重试。
@@ -252,7 +277,13 @@ async function fetchLuogu(uid) {
     }
     function fieldStr(name) {
       const m = scope.match(new RegExp('"' + name + '":"((?:[^"\\\\]|\\\\.)*)"'));
-      return m ? m[1] : null;
+      if (!m) return null;
+      // 字符串中的 \uXXXX 转义需要 JSON 解码还原为汉字
+      try {
+        return JSON.parse('"' + m[1] + '"');
+      } catch (e) {
+        return m[1];
+      }
     }
     const out = {
       available: true,

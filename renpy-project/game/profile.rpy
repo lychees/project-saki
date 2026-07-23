@@ -157,6 +157,18 @@ init python:
         # 查询状态刷新（桌面线程完成后重绘界面）
         renpy.restart_interaction()
 
+    def _profile_home_url(platform, handle):
+        """平台个人主页 URL。"""
+        if platform == "cf":
+            return "https://codeforces.com/profile/" + handle
+        if platform == "atc":
+            return "https://atcoder.jp/users/" + handle
+        if platform == "luogu":
+            return "https://www.luogu.com.cn/user/" + handle
+        if platform == "vj":
+            return "https://vjudge.net/user/" + handle
+        return "https://vjudge.net"
+
     # ---- 技能雷达图（Creator-Defined Displayable，参照竞赛数据面板风格）----
     class ProfileRadar(renpy.Displayable):
 
@@ -270,7 +282,20 @@ screen account_binding():
 
 
 # ---- 选手档案主面板 ----
-screen profile_card(title, body_lines, accent="#33ccff"):
+# 卡片头部的账号链接（可点击跳转平台主页；空账号不可点）
+screen profile_platform_link(platform, handle):
+    if handle:
+        textbutton handle:
+            action Function(_oj_webbrowser.open, _profile_home_url(platform, handle))
+            text_size 16
+            text_underline True
+            text_idle_color "#8fc"
+            text_hover_color "#66ccff"
+    else:
+        text "未绑定" size 16 color "#666"
+
+
+screen profile_card(title, body_lines, platform=None, handle="", accent="#33ccff"):
     frame:
         xsize 268
         ysize 152
@@ -278,7 +303,12 @@ screen profile_card(title, body_lines, accent="#33ccff"):
         padding (16, 12)
         vbox:
             spacing 6
-            text title size 18 color "#9ab"
+            hbox:
+                spacing 8
+                text title size 18 color "#9ab" yalign 0.5
+                if platform:
+                    text "·" size 18 color "#9ab" yalign 0.5
+                    use profile_platform_link(platform, handle)
             for txt, col, sz in body_lines:
                 text txt size sz color col
 
@@ -316,42 +346,48 @@ screen player_profile_screen():
             spacing 14
 
             if _cf.get("available"):
-                use profile_card("Codeforces", [
+                use profile_card("Codeforces", platform="cf", handle=persistent.cf_user, body_lines=[
                     ("rating", "#9ab", 16),
                     (str(_cf.get("rating")), _cf_color(_cf.get("rating")), 40),
                     ("max " + str(_cf.get("maxRating")) + "  " + str(_cf.get("rank")), "#9ab", 15)])
             else:
-                use profile_card("Codeforces", [
+                use profile_card("Codeforces", platform="cf", handle=persistent.cf_user, body_lines=[
                     ("暂未获取", "#888", 24),
                     (persistent.cf_user or "未绑定", "#666", 15)])
 
-            if _atc.get("available"):
-                use profile_card("AtCoder", [
+            if _atc.get("available") and _atc.get("rating") is not None:
+                use profile_card("AtCoder", platform="atc", handle=persistent.atc_user, body_lines=[
                     ("rating", "#9ab", 16),
                     (str(_atc.get("rating")), _atc_color(_atc.get("rating")), 40),
                     ("highest " + str(_atc.get("highest")), "#9ab", 15)])
+            elif _atc.get("available"):
+                # kenkoooo 兜底指标（atcoder.jp 不可达时保证有数据）
+                use profile_card("AtCoder", platform="atc", handle=persistent.atc_user, body_lines=[
+                    ("Rated Point Sum", "#9ab", 15),
+                    (str(_atc.get("ratedPointSum")), "#13c2c2", 36),
+                    ("AC " + str(_atc.get("acceptedCount")) + " (rank " + str(_atc.get("acceptedCountRank")) + ")", "#9ab", 15)])
             else:
-                use profile_card("AtCoder", [
+                use profile_card("AtCoder", platform="atc", handle=persistent.atc_user, body_lines=[
                     ("暂未获取", "#888", 24),
                     (persistent.atc_user or "未绑定", "#666", 15)])
 
             if _lg.get("available"):
-                use profile_card("Luogu", [
+                use profile_card("Luogu", platform="luogu", handle=persistent.luogu_user, body_lines=[
                     (str(_lg.get("name")), "#8fc", 20),
                     ("Lv." + str(_lg.get("ccfLevel")), "#13c2c2", 36),
                     ("排名 " + str(_lg.get("ranking")) + "  通过 " + (str(_lg.get("passedProblemCount")) if _lg.get("passedProblemCount") is not None else "—"), "#9ab", 15)])
             else:
-                use profile_card("Luogu", [
+                use profile_card("Luogu", platform="luogu", handle=persistent.luogu_user, body_lines=[
                     ("暂未获取", "#888", 24),
                     (persistent.luogu_user or "未绑定", "#666", 15)])
 
             if _vj.get("available"):
-                use profile_card("vjudge", [
+                use profile_card("vjudge", platform="vj", handle=persistent.vjudge_user, body_lines=[
                     ("近期活跃（近 100 提交）", "#9ab", 15),
                     ("AC " + str(_vj.get("recentAc")), "#33ccff", 40),
                     ("仅近期窗口统计", "#666", 14)])
             else:
-                use profile_card("vjudge", [
+                use profile_card("vjudge", platform="vj", handle=persistent.vjudge_user, body_lines=[
                     ("暂未获取", "#888", 24),
                     (persistent.vjudge_user or "未绑定", "#666", 15)])
 
