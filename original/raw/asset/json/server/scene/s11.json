@@ -1,0 +1,966 @@
+{
+    "sceneObjects": [],
+    "customCommands": [
+        [
+            [
+                11,
+                3,
+                0,
+                "",
+                3,
+                -3,
+                "<span style='color:#FfFffF'>..ZzZzzz..</span>",
+                null,
+                -1,
+                0,
+                {
+                    "___cmdID": "66138161630_0.22391218995399975"
+                }
+            ],
+            [
+                40001,
+                {
+                    "24538808102_0.9970934946254328": 1,
+                    "49612012650_0.7509974095572418": 1,
+                    "24538808435_0.6230939565765392": "asset/image/picture/background/school/bg_017.png",
+                    "49518385245_0.9308839798952664": 1,
+                    "49141521249_0.2965750598394892": 0,
+                    "49519573910_0.08853124862540018": 1,
+                    "49141521416_0.0884961804795068": -177,
+                    "49519590084_0.3058131165318816": 1,
+                    "49150249927_0.6881795527970145": 100,
+                    "49519636189_0.2521948025226537": 1,
+                    "49232462793_0.7622411974016037": 1200,
+                    "49520636693_0.8404154506260593": 1,
+                    "49232464582_0.12430969584603324": 900,
+                    "49520744730_0.6026838995761481": 1,
+                    "49232999716_0.2133484967243402": 0,
+                    "49520812848_0.5734967173507821": 1,
+                    "49234813142_0.3142568229981375": 1,
+                    "49520873912_0.5927053372462527": 1,
+                    "49249262086_0.4763525036126073": false,
+                    "49233147770_0.6353950190434796": 0,
+                    "49234859651_0.6035613922030387": 0,
+                    "49599648354_0.3738368266485066": false,
+                    "49518248081_0.4367396293869368": false,
+                    "49599660535_0.0823572381286597": "",
+                    "49518318443_0.5988810162565685": false,
+                    "49519399740_0.07229930251623617": false,
+                    "49519436070_0.9418611019894294": false,
+                    "49519475735_0.9428268094401824": false,
+                    "49519529748_0.519982170810438": false,
+                    "49520771123_0.27311479097864666": false,
+                    "49611947752_0.41521729946538755": false
+                },
+                "66138161630_0.38367838300958823"
+            ],
+            [
+                67,
+                "asset/audio/se/打字.mp3",
+                1,
+                1,
+                {
+                    "___cmdID": "66375362009_0.6688442367557048"
+                }
+            ],
+            [
+                11,
+                9,
+                null,
+                "",
+                0,
+                -3,
+                "<span style='color:#FfFffF'>暑期集训篇 Week-1 Day-4[p5]</span>",
+                null,
+                1,
+                0,
+                {
+                    "___cmdID": "66372905551_0.528669902183698"
+                }
+            ],
+            [
+                11,
+                3,
+                6,
+                "SevenZero",
+                3,
+                -3,
+                "<span style='color:#FfFffF'>今天和状态空间搜索的 Day 2，\n</span><span style='color:#FfFffF'>我准备了四道习题，可能你们已经会做了。</span>",
+                null,
+                1,
+                0,
+                {
+                    "___cmdID": "66138161630_0.8043401711951197"
+                }
+            ],
+            [
+                11,
+                3,
+                6,
+                "SevenZero",
+                3,
+                -3,
+                "<span style='color:#FfFffF'>额，今天学长比较忙，如果还不会做得话，\n</span><span style='color:#FfFffF'>放学之后可以来问我 ...</span>",
+                null,
+                1,
+                0,
+                {
+                    "___cmdID": "66905999048_0.6085922858724515"
+                }
+            ],
+            [
+                11,
+                3,
+                6,
+                "SevenZero",
+                3,
+                -3,
+                "<span style='color:#FfFffF'>じゃなぁ ...</span>",
+                null,
+                1,
+                0,
+                {
+                    "___cmdID": "66906162666_0.7346472822077512"
+                }
+            ],
+            [
+                11,
+                3,
+                2,
+                "Kotori",
+                3,
+                -3,
+                "<span style='color:#FfFffF'>（什么嘛。。。结果还是要靠自己啊。。）</span>",
+                null,
+                5,
+                0,
+                {
+                    "___cmdID": "66906437932_0.5661907636289774"
+                }
+            ],
+            [
+                20,
+                "Generate exam1",
+                "// 当前的事件触发器：trigger: CommandTrigger;\ngenerateExam('exam1', ['51Nod-2067', 'POJ-1077', 'POJ-1101', 'POJ-1455', 'POJ-1324']);",
+                "generateExam('exam1', ['51Nod-2067', 'POJ-1077', 'POJ-1101', 'POJ-1455', 'POJ-1324']);\n",
+                {
+                    "___cmdID": "66906212768_0.16782086969237398"
+                }
+            ],
+            [
+                8,
+                "exam1",
+                {
+                    "___cmdID": "66906212768_0.9634379131764361"
+                }
+            ],
+            [
+                3,
+                0,
+                0,
+                -1,
+                {
+                    "___cmdID": "66906212768_0.629404513246109"
+                }
+            ],
+            [
+                4,
+                "POJ 3250",
+                0,
+                -1,
+                1,
+                2001,
+                [],
+                {
+                    "___cmdID": "66906212768_0.6715642204669448"
+                }
+            ],
+            [
+                0,
+                0,
+                2,
+                [
+                    0,
+                    1,
+                    2001,
+                    0
+                ],
+                0,
+                0,
+                [
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                0,
+                [
+                    1,
+                    1,
+                    [
+                        0,
+                        0
+                    ]
+                ],
+                0,
+                0,
+                [
+                    1,
+                    1
+                ],
+                "",
+                "",
+                true,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                0,
+                0,
+                [
+                    0,
+                    {},
+                    ""
+                ],
+                [
+                    0,
+                    {},
+                    ""
+                ],
+                {
+                    "___cmdID": "66906212768_0.7144687778101686"
+                }
+            ],
+            [
+                20,
+                "弹出广告",
+                "// 当前的事件触发器：trigger: CommandTrigger;\nconst problemsMapName = WorldData.AllProblems.currentProblemsName;\nconst problemsMap = WorldData.AllProblems[problemsMapName];\n\nwindow.open(`https://vjudge.net/problem/${Object.keys(problemsMap)[0]}`, '_blank');",
+                "var problemsMapName = WorldData.AllProblems.currentProblemsName;\nvar problemsMap = WorldData.AllProblems[problemsMapName];\nwindow.open(\"https://vjudge.net/problem/\" + Object.keys(problemsMap)[0], '_blank');\n",
+                {
+                    "___cmdID": "66906212768_0.886783344367261"
+                }
+            ],
+            [
+                16,
+                1,
+                false,
+                {
+                    "___cmdID": "66906212768_0.83096059321075"
+                }
+            ],
+            [
+                9,
+                "exam1",
+                {
+                    "___cmdID": "66906212768_0.9253693100313707"
+                }
+            ],
+            [
+                1,
+                {
+                    "___cmdID": "66906212768_0.5871814825223187"
+                }
+            ],
+            [
+                11,
+                1,
+                null,
+                "",
+                3,
+                -3,
+                "<span style='color:#FfFffF'>你已经完成这个题目了哦！去试试其他的题目吧。</span>",
+                null,
+                1,
+                0,
+                {
+                    "___cmdID": "66906212768_0.12139172464775672"
+                }
+            ],
+            [
+                9,
+                "exam1",
+                {
+                    "___cmdID": "66906212768_0.7554080238217749"
+                }
+            ],
+            [
+                2,
+                {
+                    "___cmdID": "66906212768_0.2885640881852771"
+                }
+            ],
+            [
+                4,
+                "1",
+                -1,
+                -1,
+                1,
+                2002,
+                [],
+                {
+                    "___cmdID": "66906212768_0.25788223843501235"
+                }
+            ],
+            [
+                0,
+                0,
+                2,
+                [
+                    0,
+                    1,
+                    2002,
+                    0
+                ],
+                0,
+                0,
+                [
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                0,
+                [
+                    1,
+                    1,
+                    [
+                        0,
+                        0
+                    ]
+                ],
+                0,
+                0,
+                [
+                    1,
+                    1
+                ],
+                "",
+                "",
+                true,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                0,
+                0,
+                [
+                    0,
+                    {},
+                    ""
+                ],
+                [
+                    0,
+                    {},
+                    ""
+                ],
+                {
+                    "___cmdID": "66906766816_0.7886589568323339"
+                }
+            ],
+            [
+                20,
+                "弹出广告",
+                "// 当前的事件触发器：trigger: CommandTrigger;\nconst problemsMapName = WorldData.AllProblems.currentProblemsName;\nconst problemsMap = WorldData.AllProblems[problemsMapName];\n\nwindow.open(`https://vjudge.net/problem/${Object.keys(problemsMap)[0]}`, '_blank');",
+                "var problemsMapName = WorldData.AllProblems.currentProblemsName;\nvar problemsMap = WorldData.AllProblems[problemsMapName];\nwindow.open(\"https://vjudge.net/problem/\" + Object.keys(problemsMap)[0], '_blank');\n",
+                {
+                    "___cmdID": "66906766816_0.9704326501480334"
+                }
+            ],
+            [
+                16,
+                1,
+                false,
+                {
+                    "___cmdID": "66906766816_0.8913372833753335"
+                }
+            ],
+            [
+                9,
+                "exam1",
+                {
+                    "___cmdID": "66906766816_0.04658515186523804"
+                }
+            ],
+            [
+                1,
+                {
+                    "___cmdID": "66906766816_0.17412566691299558"
+                }
+            ],
+            [
+                11,
+                1,
+                null,
+                "",
+                3,
+                -3,
+                "<span style='color:#FfFffF'>你已经完成这个题目了哦！去试试其他的题目吧。</span>",
+                null,
+                1,
+                0,
+                {
+                    "___cmdID": "66906766816_0.27357573355567455"
+                }
+            ],
+            [
+                9,
+                "exam1",
+                {
+                    "___cmdID": "66906766816_0.6132597240173652"
+                }
+            ],
+            [
+                2,
+                {
+                    "___cmdID": "66906766816_0.29972993732520403"
+                }
+            ],
+            [
+                4,
+                "251Nod-2067",
+                -1,
+                -1,
+                1,
+                2003,
+                [],
+                {
+                    "___cmdID": "66906570404_0.08940121884940466"
+                }
+            ],
+            [
+                0,
+                0,
+                2,
+                [
+                    0,
+                    1,
+                    2003,
+                    0
+                ],
+                0,
+                0,
+                [
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                0,
+                [
+                    1,
+                    1,
+                    [
+                        0,
+                        0
+                    ]
+                ],
+                0,
+                0,
+                [
+                    1,
+                    1
+                ],
+                "",
+                "",
+                true,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                0,
+                0,
+                [
+                    0,
+                    {},
+                    ""
+                ],
+                [
+                    0,
+                    {},
+                    ""
+                ],
+                {
+                    "___cmdID": "66906778169_0.014982396509709783"
+                }
+            ],
+            [
+                20,
+                "弹出广告",
+                "// 当前的事件触发器：trigger: CommandTrigger;\nconst problemsMapName = WorldData.AllProblems.currentProblemsName;\nconst problemsMap = WorldData.AllProblems[problemsMapName];\n\nwindow.open(`https://vjudge.net/problem/${Object.keys(problemsMap)[0]}`, '_blank');",
+                "var problemsMapName = WorldData.AllProblems.currentProblemsName;\nvar problemsMap = WorldData.AllProblems[problemsMapName];\nwindow.open(\"https://vjudge.net/problem/\" + Object.keys(problemsMap)[0], '_blank');\n",
+                {
+                    "___cmdID": "66906778169_0.12871740787464447"
+                }
+            ],
+            [
+                16,
+                1,
+                false,
+                {
+                    "___cmdID": "66906778169_0.3150246856555017"
+                }
+            ],
+            [
+                9,
+                "exam1",
+                {
+                    "___cmdID": "66906778169_0.5655693469227239"
+                }
+            ],
+            [
+                1,
+                {
+                    "___cmdID": "66906778169_0.3487155884898461"
+                }
+            ],
+            [
+                11,
+                1,
+                null,
+                "",
+                3,
+                -3,
+                "<span style='color:#FfFffF'>你已经完成这个题目了哦！去试试其他的题目吧。</span>",
+                null,
+                1,
+                0,
+                {
+                    "___cmdID": "66906778169_0.27294724195791153"
+                }
+            ],
+            [
+                9,
+                "exam1",
+                {
+                    "___cmdID": "66906778169_0.4865573484556429"
+                }
+            ],
+            [
+                2,
+                {
+                    "___cmdID": "66906778169_0.3264123533748431"
+                }
+            ],
+            [
+                4,
+                "51Nod-2067",
+                -1,
+                -1,
+                1,
+                2004,
+                [],
+                {
+                    "___cmdID": "66906570404_0.9147259594622181"
+                }
+            ],
+            [
+                0,
+                0,
+                2,
+                [
+                    0,
+                    1,
+                    2004,
+                    0
+                ],
+                0,
+                0,
+                [
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                0,
+                [
+                    1,
+                    1,
+                    [
+                        0,
+                        0
+                    ]
+                ],
+                0,
+                0,
+                [
+                    1,
+                    1
+                ],
+                "",
+                "",
+                true,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                0,
+                0,
+                [
+                    0,
+                    {},
+                    ""
+                ],
+                [
+                    0,
+                    {},
+                    ""
+                ],
+                {
+                    "___cmdID": "66906785607_0.1812535548130041"
+                }
+            ],
+            [
+                20,
+                "弹出广告",
+                "// 当前的事件触发器：trigger: CommandTrigger;\nconst problemsMapName = WorldData.AllProblems.currentProblemsName;\nconst problemsMap = WorldData.AllProblems[problemsMapName];\n\nwindow.open(`https://vjudge.net/problem/${Object.keys(problemsMap)[0]}`, '_blank');",
+                "var problemsMapName = WorldData.AllProblems.currentProblemsName;\nvar problemsMap = WorldData.AllProblems[problemsMapName];\nwindow.open(\"https://vjudge.net/problem/\" + Object.keys(problemsMap)[0], '_blank');\n",
+                {
+                    "___cmdID": "66906785607_0.7739479032964705"
+                }
+            ],
+            [
+                16,
+                1,
+                false,
+                {
+                    "___cmdID": "66906785607_0.9272091610349269"
+                }
+            ],
+            [
+                9,
+                "exam1",
+                {
+                    "___cmdID": "66906785607_0.7256987399093444"
+                }
+            ],
+            [
+                1,
+                {
+                    "___cmdID": "66906785607_0.48052572674865623"
+                }
+            ],
+            [
+                11,
+                1,
+                null,
+                "",
+                3,
+                -3,
+                "<span style='color:#FfFffF'>你已经完成这个题目了哦！去试试其他的题目吧。</span>",
+                null,
+                1,
+                0,
+                {
+                    "___cmdID": "66906785607_0.5139308369898408"
+                }
+            ],
+            [
+                9,
+                "exam1",
+                {
+                    "___cmdID": "66906785607_0.04763509285646039"
+                }
+            ],
+            [
+                2,
+                {
+                    "___cmdID": "66906785607_0.8555030068467773"
+                }
+            ],
+            [
+                4,
+                "1",
+                -1,
+                -1,
+                1,
+                2005,
+                [],
+                {
+                    "___cmdID": "66906570404_0.2319153677281256"
+                }
+            ],
+            [
+                0,
+                0,
+                2,
+                [
+                    0,
+                    1,
+                    2005,
+                    0
+                ],
+                0,
+                0,
+                [
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                0,
+                [
+                    1,
+                    1,
+                    [
+                        0,
+                        0
+                    ]
+                ],
+                0,
+                0,
+                [
+                    1,
+                    1
+                ],
+                "",
+                "",
+                true,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                0,
+                0,
+                [
+                    0,
+                    {},
+                    ""
+                ],
+                [
+                    0,
+                    {},
+                    ""
+                ],
+                {
+                    "___cmdID": "66906792209_0.7580876539357218"
+                }
+            ],
+            [
+                20,
+                "弹出广告",
+                "// 当前的事件触发器：trigger: CommandTrigger;\nconst problemsMapName = WorldData.AllProblems.currentProblemsName;\nconst problemsMap = WorldData.AllProblems[problemsMapName];\n\nwindow.open(`https://vjudge.net/problem/${Object.keys(problemsMap)[0]}`, '_blank');",
+                "var problemsMapName = WorldData.AllProblems.currentProblemsName;\nvar problemsMap = WorldData.AllProblems[problemsMapName];\nwindow.open(\"https://vjudge.net/problem/\" + Object.keys(problemsMap)[0], '_blank');\n",
+                {
+                    "___cmdID": "66906792209_0.9011591745700314"
+                }
+            ],
+            [
+                16,
+                1,
+                false,
+                {
+                    "___cmdID": "66906792209_0.047664859743189014"
+                }
+            ],
+            [
+                9,
+                "exam1",
+                {
+                    "___cmdID": "66906792209_0.8950736518406182"
+                }
+            ],
+            [
+                1,
+                {
+                    "___cmdID": "66906792209_0.23415937341937965"
+                }
+            ],
+            [
+                11,
+                1,
+                null,
+                "",
+                3,
+                -3,
+                "<span style='color:#FfFffF'>你已经完成这个题目了哦！去试试其他的题目吧。</span>",
+                null,
+                1,
+                0,
+                {
+                    "___cmdID": "66906792209_0.13194366682913272"
+                }
+            ],
+            [
+                9,
+                "exam1",
+                {
+                    "___cmdID": "66906792209_0.16905931068167912"
+                }
+            ],
+            [
+                2,
+                {
+                    "___cmdID": "66906792209_0.7205997852738897"
+                }
+            ],
+            [
+                4,
+                "1",
+                -1,
+                -1,
+                1,
+                2020,
+                [],
+                {
+                    "___cmdID": "66906753386_0.9276290989837808"
+                }
+            ],
+            [
+                10,
+                {
+                    "___cmdID": "66906212768_0.05903290955165863"
+                }
+            ],
+            [
+                11,
+                3,
+                2,
+                "Kotori",
+                3,
+                -3,
+                "<span style='color:#FfFffF'>（我靠这些题目码力也太坑了吧。。）</span>",
+                null,
+                5,
+                0,
+                {
+                    "___cmdID": "66906811774_0.03824562781716434"
+                }
+            ],
+            [
+                20,
+                "",
+                "// 当前的事件触发器：trigger: CommandTrigger;\n\nlet result = Object.values(WorldData.AllProblems['exam1'];\nlet score = result.reduce((a, b) => a + b, 0);\n\n Game.player.variable.setVariable(2001, score);",
+                "var result = Object.values(WorldData.AllProblems['exam1']);\nvar score = result.reduce(function (a, b) { return a + b; }, 0);\nGame.player.variable.setVariable(2001, score);\n",
+                {
+                    "___cmdID": "66907294212_0.00014617219439205797"
+                }
+            ],
+            [
+                11,
+                3,
+                6,
+                "SevenZero",
+                3,
+                -3,
+                "<span style='color:#FfFffF'>我回来啦...</span>",
+                null,
+                1,
+                0,
+                {
+                    "___cmdID": "66907842849_0.4578397396374674"
+                }
+            ],
+            [
+                11,
+                3,
+                6,
+                "SevenZero",
+                3,
+                -3,
+                "<span style='color:#FfFffF'>（Kotori 同学通过了 [@v2001] 道题目啊...）</span>",
+                null,
+                1,
+                0,
+                {
+                    "___cmdID": "66907849866_0.9535075193901927"
+                }
+            ],
+            [
+                0,
+                0,
+                2,
+                [
+                    0,
+                    1,
+                    2001,
+                    0
+                ],
+                2,
+                0,
+                [
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                0,
+                [
+                    1,
+                    1,
+                    [
+                        0,
+                        0
+                    ]
+                ],
+                0,
+                0,
+                [
+                    1,
+                    1
+                ],
+                "",
+                "",
+                false,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                0,
+                0,
+                [
+                    0,
+                    {},
+                    ""
+                ],
+                [
+                    0,
+                    {},
+                    ""
+                ],
+                {
+                    "___cmdID": "66907798055_0.758115828172333"
+                }
+            ],
+            [
+                2,
+                {
+                    "___cmdID": "66907826371_0.17747737125697105"
+                }
+            ],
+            [
+                40008,
+                {
+                    "49807345511_0.462284017239353": false,
+                    "49807339080_0.9818794648978915": 1,
+                    "49807339080_0.7327578678428031": 1
+                },
+                "66908035039_0.35019507417086837"
+            ],
+            [
+                40017,
+                {
+                    "50715038747_0.21761311072349354": 15
+                },
+                "66908035039_0.48733817839818294"
+            ]
+        ]
+    ],
+    "customAttributes": [],
+    "customAttributesCaches": [],
+    "events": [],
+    "statusPages": [],
+    "statusPagesSelectedIndexs": [],
+    "id": 11
+}

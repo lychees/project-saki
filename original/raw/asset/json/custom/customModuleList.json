@@ -1,0 +1,61 @@
+{
+ "list": [
+  null,
+  "CG鉴赏"
+ ],
+ "data": {
+  "1": {
+   "compAutoOrderLimitHeight": 0,
+   "id": 1,
+   "blockList": [
+    {
+     "name": "未命名块",
+     "blockAttrs": [
+      {
+       "attr": {
+        "id": "51049832303_0.4396967104331937",
+        "varName": "CGs",
+        "varType": 1,
+        "compData": {
+         "compType": 13,
+         "compParam": {}
+        },
+        "defaultValue": "",
+        "hideMode": false,
+        "useCommand": false,
+        "onlyPointTo": false,
+        "moduleID": 1,
+        "dataStructureID": 1,
+        "arrayMode": true,
+        "arrayLength": 100,
+        "arrayAllowDelete": false,
+        "arrayAllowSwap": false,
+        "arrayAllowUpdate": false,
+        "accessMode": 1,
+        "syncMode": 0,
+        "attrTips": "",
+        "alias": "CG图片集",
+        "onlyConfig": false,
+        "preview": false,
+        "autoTitleWidth": true,
+        "titleWidth": 100,
+        "eyeShow": true,
+        "lockBlock": false
+       },
+       "attrConditions": [],
+       "y": 9,
+       "x": 15,
+       "width": 418,
+       "height": 279
+      }
+     ],
+     "blockCondition": [],
+     "blockHeight": 300,
+     "autoOrder": true,
+     "hideBlockTitle": true
+    }
+   ],
+   "singleType": true
+  }
+ }
+}

@@ -1,0 +1,18 @@
+# 临时/构建产物
+.tmp/
+*-dists/
+
+# Ren'Py 编译与运行产物
+*.rpyc
+renpy-project/game/cache/
+renpy-project/game/saves/
+renpy-project/log.txt
+renpy-project/traceback.txt
+renpy-project/errors.txt
+log.txt
+traceback.txt
+errors.txt
+
+# 系统垃圾
+thumbs.db
+.DS_Store

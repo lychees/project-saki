@@ -1,0 +1,212 @@
+{
+    "list": [
+        null,
+        "海棠无香",
+        "Day 1 数据结构-1",
+        "新的场景3",
+        "地外生命与宇宙人",
+        "自由意志",
+        "网络流篇-1",
+        "Day 2 动态规划",
+        "Day 3 状态空间搜索-1",
+        "冲突",
+        "选剧本",
+        "Day 4 状态空间搜索-2",
+        "暑期集训篇",
+        "回忆碎片",
+        "Week1",
+        "Day 5 数据结构-2",
+        "Day 6 多校-1",
+        "Day 7 休息日",
+        "Week2",
+        "Day 1 图论-1",
+        "Day 2 图论-2",
+        "Day 3 数论-1",
+        "Day 4 字符串-1",
+        "Day 5 计算几何-1",
+        "Day 6 比賽",
+        "Day 7 休息日",
+        "开学篇",
+        "Day 0",
+        "生日礼物",
+        "冲突 - 褪色奖状",
+        "对话测试场景",
+        "生成函数"
+    ],
+    "node": [
+        {
+            "id": 3,
+            "name": "新的场景3",
+            "children": [
+                {
+                    "id": 1,
+                    "name": "海棠无香",
+                    "children": [],
+                    "isOpen": true
+                }
+            ],
+            "isOpen": true
+        },
+        {
+            "id": 10,
+            "name": "选剧本",
+            "children": [
+                {
+                    "id": 12,
+                    "name": "暑期集训篇",
+                    "children": [
+                        {
+                            "id": 27,
+                            "name": "Day 0",
+                            "children": []
+                        },
+                        {
+                            "id": 14,
+                            "name": "Week1",
+                            "children": [
+                                {
+                                    "id": 2,
+                                    "name": "Day 1 数据结构-1",
+                                    "children": [],
+                                    "isOpen": true
+                                },
+                                {
+                                    "id": 7,
+                                    "name": "Day 2 动态规划",
+                                    "children": [],
+                                    "isOpen": true
+                                },
+                                {
+                                    "id": 8,
+                                    "name": "Day 3 状态空间搜索-1",
+                                    "children": [],
+                                    "isOpen": true
+                                },
+                                {
+                                    "id": 11,
+                                    "name": "Day 4 状态空间搜索-2",
+                                    "children": [],
+                                    "isOpen": true
+                                },
+                                {
+                                    "id": 15,
+                                    "name": "Day 5 数据结构-2",
+                                    "children": [],
+                                    "isOpen": true
+                                },
+                                {
+                                    "id": 16,
+                                    "name": "Day 6 多校-1",
+                                    "children": [],
+                                    "isOpen": true
+                                },
+                                {
+                                    "id": 17,
+                                    "name": "Day 7 休息日",
+                                    "children": []
+                                }
+                            ],
+                            "isOpen": false
+                        },
+                        {
+                            "id": 18,
+                            "name": "Week2",
+                            "children": [
+                                {
+                                    "id": 19,
+                                    "name": "Day 1 图论-1",
+                                    "children": []
+                                },
+                                {
+                                    "id": 20,
+                                    "name": "Day 2 图论-2",
+                                    "children": []
+                                },
+                                {
+                                    "id": 21,
+                                    "name": "Day 3 数论-1",
+                                    "children": []
+                                },
+                                {
+                                    "id": 22,
+                                    "name": "Day 4 字符串-1",
+                                    "children": []
+                                },
+                                {
+                                    "id": 23,
+                                    "name": "Day 5 计算几何-1",
+                                    "children": []
+                                },
+                                {
+                                    "id": 24,
+                                    "name": "Day 6 比賽",
+                                    "children": []
+                                },
+                                {
+                                    "id": 25,
+                                    "name": "Day 7 休息日",
+                                    "children": []
+                                }
+                            ],
+                            "isOpen": false
+                        }
+                    ],
+                    "isOpen": true
+                },
+                {
+                    "id": 26,
+                    "name": "开学篇",
+                    "children": []
+                },
+                {
+                    "id": 13,
+                    "name": "回忆碎片",
+                    "children": [
+                        {
+                            "id": 4,
+                            "name": "地外生命与宇宙人",
+                            "children": []
+                        },
+                        {
+                            "id": 5,
+                            "name": "自由意志",
+                            "children": []
+                        },
+                        {
+                            "id": 9,
+                            "name": "冲突",
+                            "children": []
+                        },
+                        {
+                            "id": 6,
+                            "name": "网络流篇-1",
+                            "children": []
+                        },
+                        {
+                            "id": 28,
+                            "name": "生日礼物",
+                            "children": []
+                        },
+                        {
+                            "id": 29,
+                            "name": "冲突 - 褪色奖状",
+                            "children": []
+                        },
+                        {
+                            "id": 31,
+                            "name": "生成函数",
+                            "children": []
+                        }
+                    ],
+                    "isOpen": true
+                }
+            ],
+            "isOpen": true
+        },
+        {
+            "id": 30,
+            "name": "对话测试场景",
+            "children": []
+        }
+    ]
+}

@@ -1,0 +1,210 @@
+{
+ "root": {
+  "children": [
+   {
+    "id": "51051981943_0.6685348105627096",
+    "condition": [],
+    "type": "UIBitmap",
+    "name": "界面背景",
+    "x": 0,
+    "y": 0,
+    "width": 1200,
+    "height": 720,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "image": "asset/image/picture/ui/menu/new/bgi.png",
+    "grid9": "0,0,0,0,0",
+    "flip": null,
+    "pivotType": 0
+   },
+   {
+    "id": "51049805936_0.5205298184628389",
+    "condition": [],
+    "type": "UIBitmap",
+    "name": "鉴赏框背景",
+    "x": 97,
+    "y": 122,
+    "width": 1036,
+    "height": 535,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "image": "asset/image/picture/ui/menu/new/paper.png",
+    "grid9": "0,0,0,0,0",
+    "flip": null,
+    "pivotType": 0
+   },
+   {
+    "id": "51699020441_0.7804447857990593",
+    "condition": [],
+    "type": "UIBitmap",
+    "name": "界面标志",
+    "x": 20,
+    "y": 0,
+    "width": 447,
+    "height": 100,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "image": "asset/image/picture/ui/menu/new/title_CG gallery.png",
+    "grid9": "0,0,0,0,0",
+    "flip": null,
+    "pivotType": 0
+   },
+   {
+    "id": "51050777659_0.1289500755140769",
+    "condition": [],
+    "type": "UIList",
+    "name": "cgList",
+    "x": 238,
+    "y": 150,
+    "width": 822,
+    "height": 445,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "itemModelGUI": 1003,
+    "previewSize": 30,
+    "selectEnable": true,
+    "repeatX": 3,
+    "itemWidth": 240,
+    "itemHeight": 140,
+    "spaceX": 22,
+    "spaceY": 32,
+    "scrollShowType": 2,
+    "hScrollBar": "asset/image/picture/control/hscroll_bar.png",
+    "hScrollBg": "asset/image/picture/control/hscroll_bg.png",
+    "vScrollBar": "asset/image/picture/ui/menu/new/scroller.png",
+    "vScrollBg": "asset/image/picture/control/vscroll_bg.png",
+    "scrollWidth": 6,
+    "selectImageURL": "asset/image/picture/ui/menu/CGSelectBox.png",
+    "selectImageGrid9": "5,5,5,5,0",
+    "selectedImageAlpha": 1,
+    "selectedImageOnTop": true,
+    "overImageURL": "asset/image/picture/control/uilistover.png",
+    "overImageGrid9": "0,0,0,0,0",
+    "overImageAlpha": 0,
+    "overImageOnTop": true,
+    "overSelectMode": true,
+    "slowmotionType": 0
+   },
+   {
+    "id": "51050858244_0.10654836860026484",
+    "condition": [],
+    "type": "UIButton",
+    "name": "关闭CG鉴赏界面按钮",
+    "x": 1025,
+    "y": 30,
+    "width": 104,
+    "height": 40,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [
+     true
+    ],
+    "isOpen": true,
+    "label": "",
+    "image1": "asset/image/picture/ui/menu/new/back.png",
+    "grid9img1": "0,0,0,0,0",
+    "image2": "asset/image/picture/ui/menu/new/back.png",
+    "grid9img2": "0,0,0,0,0",
+    "image3": "asset/image/picture/ui/menu/new/back.png",
+    "grid9img3": "0,0,0,0,0",
+    "fontSize": 16,
+    "color": "#3a87e7",
+    "overColor": "#ff9962",
+    "clickColor": "#ff9962",
+    "bold": false,
+    "italic": false,
+    "smooth": null,
+    "align": 1,
+    "valign": 1,
+    "letterSpacing": 0,
+    "font": "思源黑体",
+    "textDx": -10,
+    "textDy": -4,
+    "textStroke": 0,
+    "textStrokeColor": "#000000"
+   },
+   {
+    "id": "66558061554_0.8370844608457553",
+    "condition": [],
+    "type": "UIBitmap",
+    "name": "图片",
+    "x": 20,
+    "y": 175,
+    "width": 61,
+    "height": 489,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "image": "asset/image/picture/ui/menu/new/CGGALLERY.png",
+    "grid9": "0,0,0,0,0",
+    "pivotType": 0
+   }
+  ]
+ },
+ "id": 11,
+ "instanceClassName": "GUI_CG",
+ "hasRootCommand": []
+}

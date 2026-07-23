@@ -1,0 +1,55 @@
+{
+ "root": {
+  "children": [
+   {
+    "id": "66022003515_0.247869750575757",
+    "condition": [],
+    "type": "UIList",
+    "name": "列表",
+    "x": 0,
+    "y": 0,
+    "width": 1200,
+    "height": 720,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "itemModelGUI": 15,
+    "previewSize": 5,
+    "selectEnable": true,
+    "repeatX": 1,
+    "itemWidth": 100,
+    "itemHeight": 10,
+    "spaceX": 2,
+    "spaceY": 85,
+    "scrollShowType": 2,
+    "hScrollBar": "asset/image/picture/control/hscroll_bar.png",
+    "hScrollBg": "asset/image/picture/control/hscroll_bg.png",
+    "vScrollBar": "asset/image/picture/control/vscroll_bar.png",
+    "vScrollBg": "asset/image/picture/control/vscroll_bg.png",
+    "scrollWidth": 16,
+    "selectImageURL": "asset/image/picture/control/uilistselect.png",
+    "selectImageGrid9": "0,0,0,0,0",
+    "selectedImageAlpha": 0.5,
+    "selectedImageOnTop": true,
+    "overImageURL": "asset/image/picture/control/uilistover.png",
+    "overImageGrid9": "0,0,0,0,0",
+    "overImageAlpha": 0.5,
+    "overImageOnTop": true,
+    "overSelectMode": true,
+    "slowmotionType": 0
+   }
+  ]
+ },
+ "id": 14,
+ "hasRootCommand": []
+}

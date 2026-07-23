@@ -1,0 +1,35 @@
+{
+ "root": {
+  "children": [
+   {
+    "id": "51050742446_0.6127957094513128",
+    "condition": [],
+    "type": "UIBitmap",
+    "name": "cg",
+    "x": 0,
+    "y": 0,
+    "width": 240,
+    "height": 144,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "image": "asset/image/picture/control/uilistBg.png",
+    "grid9": "5,5,5,5,0",
+    "pivotType": 0
+   }
+  ]
+ },
+ "id": 1003,
+ "instanceClassName": "",
+ "hasRootCommand": []
+}

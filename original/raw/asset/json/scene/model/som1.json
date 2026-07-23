@@ -1,0 +1,34 @@
+{
+ "preLayer": [
+  {
+   "varName": "avatar",
+   "type": 1,
+   "isPreView": true,
+   "inEditorShow": true,
+   "idList": [
+    1,
+    16
+   ]
+  }
+ ],
+ "varAttributes": [],
+ "attrConditions": [],
+ "presetModules": [],
+ "serverInstanceClassName": "GameServerSceneObject_1",
+ "clientInstanceClassName": "ClientSceneObject",
+ "supportTriggerTypes": [
+  true,
+  true,
+  true,
+  true,
+  true,
+  true
+ ],
+ "supportStatusPage": true,
+ "id": 1,
+ "attribute": [],
+ "clientCode": "class ClientSceneObject_1 extends ClientSceneObject_Base1 {\n    constructor(soData: SceneObject, scene: ClientScene){\n        super(soData,scene);\n    }\n}",
+ "clientJsCode": "var __extends = (this && this.__extends) || function (d, b) {\n    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];\n    function __() { this.constructor = d; }\n    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n};\nvar ClientSceneObject_1 = (function (_super) {\n    __extends(ClientSceneObject_1, _super);\n    function ClientSceneObject_1(soData, scene) {\n        _super.call(this, soData, scene);\n    }\n    return ClientSceneObject_1;\n}(ClientSceneObject_Base1));\n",
+ "commonCode": "",
+ "commonJsCode": ""
+}

@@ -1,0 +1,66 @@
+{
+ "root": {
+  "children": [
+   {
+    "id": "42603276658_0.1432355830860872",
+    "condition": [],
+    "type": "UIBitmap",
+    "name": "界面背景",
+    "x": 0,
+    "y": 0,
+    "width": 1200,
+    "height": 720,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "image": "asset/image/picture/other/Black.png",
+    "grid9": "3,3,3,3,0",
+    "pivotType": 0
+   },
+   {
+    "id": "51724800944_0.6199997516103519",
+    "condition": [],
+    "type": "UIAnimation",
+    "name": "加载动画",
+    "x": 1174,
+    "y": 697,
+    "width": 192,
+    "height": 192,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "animationID": 1,
+    "scaleNumberX": 1,
+    "scaleNumberY": 1,
+    "aniFrame": 1,
+    "playFps": 20,
+    "playType": 2,
+    "showHitEffect": true,
+    "silentMode": false
+   }
+  ]
+ },
+ "id": 2003,
+ "instanceClassName": "",
+ "hasRootCommand": []
+}

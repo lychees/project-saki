@@ -1,0 +1,68 @@
+{
+    "sceneObjects": [],
+    "customCommands": [
+        [
+            [
+                67,
+                "asset/audio/se/打字.mp3",
+                1,
+                1,
+                {
+                    "___cmdID": "66375393231_0.5364199114245003"
+                }
+            ],
+            [
+                40014,
+                {
+                    "49825113823_0.7745949272019663": 0,
+                    "49897660694_0.39897478951731946": false,
+                    "49897660694_0.6399331644068169": 1,
+                    "49897660694_0.0946225960666689": 1,
+                    "49897706791_0.8101580703633997": false,
+                    "49897693777_0.31957312098050794": 1,
+                    "49897693777_0.39600212789547196": 1,
+                    "49904671869_0.1506235712026469": [
+                        {
+                            "materials": [
+                                {
+                                    "id": 10,
+                                    "mask": "",
+                                    "useTrans": true,
+                                    "time": 0,
+                                    "trans": "{\"transType\":0,\"loopType\":0,\"timeType\":1,\"timeUnit\":1,\"totalTime\":120,\"tweenType\":0,\"tweenTypeName\":\"linearNone\",\"curveData\":[[0,0,0,99,1,1,1,3],[0,100,100]],\"refreshInterval\":16}",
+                                    "vagueness": 0.25,
+                                    "invertMask": 0,
+                                    "____timeInfo": {
+                                        "trans": 118
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "66394676524_0.8374211330795895"
+            ],
+            [
+                11,
+                9,
+                null,
+                "",
+                0,
+                -3,
+                "<span style='color:#FfFffF'>暑期集训篇 Week-2 Day-7[p5]</span>",
+                null,
+                1,
+                0,
+                {
+                    "___cmdID": "66373013910_0.20393323833979315"
+                }
+            ]
+        ]
+    ],
+    "customAttributes": [],
+    "customAttributesCaches": [],
+    "events": [],
+    "statusPages": [],
+    "statusPagesSelectedIndexs": [],
+    "id": 25
+}

@@ -1,0 +1,83 @@
+{
+ "root": {
+  "children": [
+   {
+    "id": "67080450585_0.0919342647501411",
+    "condition": [],
+    "type": "UIButton",
+    "name": "按钮",
+    "x": 2,
+    "y": 0,
+    "width": 1194,
+    "height": 723,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [
+     true
+    ],
+    "isOpen": true,
+    "label": "",
+    "image1": "asset/image/picture/ui/menu/new/未命名文件夹/textInputBg.png",
+    "grid9img1": "0,0,0,0,0",
+    "image2": "asset/image/picture/ui/menu/new/未命名文件夹/textInputBg.png",
+    "grid9img2": "0,0,0,0,0",
+    "image3": "asset/image/picture/ui/menu/new/未命名文件夹/textInputBg.png",
+    "grid9img3": "0,0,0,0,0",
+    "fontSize": 16,
+    "color": "#999999",
+    "overColor": "#999999",
+    "clickColor": "#999999",
+    "bold": false,
+    "italic": false,
+    "smooth": null,
+    "align": 1,
+    "valign": 1,
+    "letterSpacing": 0,
+    "font": "思源黑体",
+    "textDx": 0,
+    "textDy": 0,
+    "textStroke": 0,
+    "textStrokeColor": "#000000"
+   },
+   {
+    "id": "67079749168_0.902765866163586",
+    "condition": [],
+    "type": "UIBitmap",
+    "name": "图片",
+    "x": 791,
+    "y": 127,
+    "width": 373,
+    "height": 596,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "image": "asset/image/picture/ui/mobile/desktop.png",
+    "grid9": "0,0,0,0,0",
+    "flip": null,
+    "pivotType": 0
+   }
+  ]
+ },
+ "id": 21,
+ "hasRootCommand": [],
+ "instanceClassName": ""
+}

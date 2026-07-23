@@ -1,0 +1,226 @@
+{
+ "initData": true,
+ "previewMode": false,
+ "dialogBox": {
+  "x": 1,
+  "y": 552,
+  "width": 1200,
+  "height": 170,
+  "alpha": 1,
+  "image": "asset/image/picture/ui/dialog/dialogBg.png",
+  "flip": false,
+  "grid9": "0,0,0,0,0",
+  "showOnEditor": true,
+  "mouseEventEnabledInEditor": true,
+  "materialData": [
+   {
+    "materials": [
+     {
+      "id": 18,
+      "lineColorR": 0,
+      "lineColorG": 0,
+      "lineColorB": 0,
+      "lineColorA": 0,
+      "lineWidth": 0,
+      "rangeX": "{\"transType\":0,\"loopType\":0,\"timeType\":1,\"timeUnit\":1,\"totalTime\":60,\"tweenType\":0,\"tweenTypeName\":\"bounceIn\",\"curveData\":[[0,0,0,99,1,1,1,3],[0,100,100]],\"refreshInterval\":16}",
+      "____timeInfo": {
+       "rangeX": 60
+      }
+     }
+    ]
+   }
+  ],
+  "index": 0
+ },
+ "headBox": {
+  "x": -369,
+  "y": 479,
+  "width": 150,
+  "height": 140,
+  "alpha": 1,
+  "locksize": true,
+  "adaptation": true,
+  "previewHeadImg": "editorAsset/img/ui_pic.png",
+  "flip": false,
+  "perviewMode": 0,
+  "previewStandAvatarID": 0,
+  "previewStandAvatarExp": 0,
+  "previewAnimationID": 0,
+  "previewUIID": 0,
+  "viewscaleX": 1,
+  "viewscaleY": 1,
+  "viewFps": 12,
+  "viewPlayOnce": false,
+  "showOnEditor": true,
+  "mouseEventEnabledInEditor": true,
+  "materialData": [
+   {
+    "materials": []
+   }
+  ],
+  "index": 1
+ },
+ "optionBox": {
+  "x": -1449,
+  "y": 496,
+  "width": 231,
+  "height": 111,
+  "alpha": 1,
+  "column": 4,
+  "columnSpaceing": 5,
+  "row": 1,
+  "rowSpaceing": 5,
+  "image1": "asset/image/picture/control/dialogNormal.png",
+  "grid9img1": "0,0,0,0,0",
+  "image2": "asset/image/picture/control/dialogOpOver.png",
+  "grid9img2": "0,0,0,0,0",
+  "image3": "asset/image/picture/control/dialogOpDown.png",
+  "grid9img3": "0,0,0,0,0",
+  "overSe": "",
+  "overVolume": 1,
+  "overPitch": 1,
+  "clickSe": "",
+  "clickVolume": 1,
+  "clikcPitch": 1,
+  "selectImageURL": "asset/image/picture/control/dialogSelect.png",
+  "grid9img4": "0,0,0,0,0",
+  "showOnEditor": true,
+  "mouseEventEnabledInEditor": true,
+  "materialData": [
+   {
+    "materials": []
+   }
+  ],
+  "index": 2
+ },
+ "dialog": {
+  "x": 243,
+  "y": 600,
+  "width": 699,
+  "height": 134,
+  "alpha": 1,
+  "fontSize": 55,
+  "color": "#10f610",
+  "bold": true,
+  "italic": false,
+  "smooth": false,
+  "align": 1,
+  "leading": 5,
+  "letterSpacing": 0,
+  "font": "宋体",
+  "shadowEnabled": false,
+  "shadowColor": "#000000",
+  "shadowDx": 1,
+  "shadowDy": 1,
+  "stroke": 0,
+  "strokeColor": "#000000",
+  "showOnEditor": true,
+  "mouseEventEnabledInEditor": true,
+  "wordWrap": false,
+  "materialData": [
+   {
+    "materials": [
+     {
+      "id": 18,
+      "lineColorR": 0,
+      "lineColorG": 0,
+      "lineColorB": 0,
+      "lineColorA": 0,
+      "lineWidth": 0,
+      "rangeX": "{\"transType\":0,\"loopType\":0,\"timeType\":1,\"timeUnit\":1,\"totalTime\":60,\"tweenType\":0,\"tweenTypeName\":\"linearNone\",\"curveData\":[[0,0,0,99,1,1,1,3],[0,100,100]],\"refreshInterval\":16}",
+      "____timeInfo": {
+       "rangeX": 60
+      }
+     },
+     {
+      "id": 3,
+      "strength": 0.6,
+      "____timeInfo": {}
+     }
+    ]
+   }
+  ],
+  "index": 3
+ },
+ "option": {
+  "x": -479,
+  "y": 529,
+  "width": 196,
+  "height": 40,
+  "alpha": 1,
+  "fontSize": 24,
+  "color": "#FFFFFF",
+  "overColor": "#FFFFFF",
+  "clickColor": "#FFFFFF",
+  "bold": false,
+  "italic": false,
+  "smooth": false,
+  "align": 1,
+  "leading": 0,
+  "letterSpacing": 0,
+  "font": "宋体",
+  "valign": 1,
+  "shadowEnabled": false,
+  "shadowColor": "#000000",
+  "shadowDx": 1,
+  "shadowDy": 1,
+  "stroke": 0,
+  "strokeColor": "#000000",
+  "showOnEditor": true,
+  "mouseEventEnabledInEditor": true,
+  "materialData": [
+   {
+    "materials": []
+   }
+  ],
+  "index": 4
+ },
+ "nameBox": {
+  "x": -335,
+  "y": 554,
+  "width": 123,
+  "height": 28,
+  "alpha": 1,
+  "fontSize": 24,
+  "color": "#FFFFFF",
+  "bold": false,
+  "italic": false,
+  "smooth": false,
+  "align": 1,
+  "leading": 0,
+  "letterSpacing": 0,
+  "font": "宋体",
+  "valign": 1,
+  "shadowEnabled": false,
+  "shadowColor": "#000000",
+  "shadowDx": 1,
+  "shadowDy": 1,
+  "stroke": 0,
+  "strokeColor": "#000000",
+  "showOnEditor": true,
+  "mouseEventEnabledInEditor": true,
+  "materialData": [
+   {
+    "materials": []
+   }
+  ],
+  "index": 5
+ },
+ "skipBox": {
+  "x": 986,
+  "y": 942,
+  "width": 0,
+  "height": 0,
+  "alpha": 1,
+  "posIndex": 0,
+  "posX": 0,
+  "posY": 0,
+  "animationID": 0,
+  "scaleNumber": 1,
+  "playType": 2,
+  "showOnEditor": true,
+  "mouseEventEnabledInEditor": true,
+  "index": 6
+ },
+ "id": 9
+}

@@ -1,0 +1,196 @@
+{
+ "initData": true,
+ "previewMode": false,
+ "dialogBox": {
+  "x": 0,
+  "y": 513,
+  "width": 1200,
+  "height": 207,
+  "alpha": 1,
+  "image": "asset/image/picture/ui/dialog/dialogBg.png",
+  "flip": false,
+  "grid9": "0,0,0,0,0",
+  "showOnEditor": true,
+  "mouseEventEnabledInEditor": true,
+  "materialData": [
+   {
+    "materials": []
+   }
+  ],
+  "index": 0
+ },
+ "headBox": {
+  "x": -247,
+  "y": 559,
+  "width": 235,
+  "height": 120,
+  "alpha": 1,
+  "locksize": false,
+  "adaptation": true,
+  "previewHeadImg": "asset/image/picture/face/swordman/Normal.png",
+  "flip": false,
+  "perviewMode": 0,
+  "previewStandAvatarID": 0,
+  "previewStandAvatarExp": 0,
+  "previewAnimationID": 0,
+  "previewUIID": 0,
+  "viewscaleX": 1,
+  "viewscaleY": 1,
+  "viewFps": 12,
+  "viewPlayOnce": false,
+  "showOnEditor": true,
+  "mouseEventEnabledInEditor": true,
+  "materialData": [
+   {
+    "materials": []
+   }
+  ],
+  "index": 1
+ },
+ "optionBox": {
+  "x": 460,
+  "y": 155,
+  "width": 300,
+  "height": 40,
+  "alpha": 1,
+  "column": 1,
+  "columnSpaceing": 100,
+  "row": 4,
+  "rowSpaceing": 40,
+  "image1": "asset/image/picture/ui/dialog/selectBG.png",
+  "grid9img1": "0,0,0,0,0",
+  "image2": "asset/image/picture/ui/dialog/selectOver.png",
+  "grid9img2": "0,0,0,0,0",
+  "image3": "asset/image/picture/ui/dialog/selectOver.png",
+  "grid9img3": "0,0,0,0,0",
+  "overSe": "asset/audio/se/menu/Up.mp3,1,1.5",
+  "overVolume": "1",
+  "overPitch": "1.5",
+  "clickSe": "asset/audio/se/menu/Enter_Right.mp3,1,1",
+  "clickVolume": "1",
+  "clikcPitch": "1",
+  "selectImageURL": "asset/image/picture/ui/dialog/selectOver.png",
+  "grid9img4": "0,0,0,0,0",
+  "showOnEditor": true,
+  "mouseEventEnabledInEditor": true,
+  "materialData": [
+   {
+    "materials": []
+   }
+  ],
+  "index": 2
+ },
+ "dialog": {
+  "x": 118,
+  "y": 578,
+  "width": 946,
+  "height": 101,
+  "alpha": 1,
+  "fontSize": 24,
+  "color": "#FFFFFF",
+  "bold": false,
+  "italic": false,
+  "smooth": false,
+  "align": 0,
+  "leading": 5,
+  "letterSpacing": 0,
+  "font": "思源黑体",
+  "shadowEnabled": false,
+  "shadowColor": "#000000",
+  "shadowDx": 0,
+  "shadowDy": 0,
+  "stroke": 0,
+  "strokeColor": "#000000",
+  "showOnEditor": true,
+  "mouseEventEnabledInEditor": true,
+  "wordWrap": true,
+  "materialData": [
+   {
+    "materials": []
+   }
+  ],
+  "index": 3,
+  "valign": 0
+ },
+ "option": {
+  "x": 460,
+  "y": 155,
+  "width": 300,
+  "height": 40,
+  "alpha": 1,
+  "fontSize": 20,
+  "color": "#FFFFFF",
+  "overColor": "#FFFFFF",
+  "clickColor": "#FFFFFF",
+  "bold": false,
+  "italic": false,
+  "smooth": false,
+  "align": 1,
+  "leading": 0,
+  "letterSpacing": 0,
+  "font": "思源黑体",
+  "valign": 1,
+  "shadowEnabled": false,
+  "shadowColor": "#000000",
+  "shadowDx": 1,
+  "shadowDy": 1,
+  "stroke": 0,
+  "strokeColor": "#000000",
+  "showOnEditor": true,
+  "mouseEventEnabledInEditor": true,
+  "materialData": [
+   {
+    "materials": []
+   }
+  ],
+  "index": 4
+ },
+ "nameBox": {
+  "x": 94,
+  "y": 573,
+  "width": 140,
+  "height": 30,
+  "alpha": 1,
+  "fontSize": 32,
+  "color": "#FFFFFF",
+  "bold": false,
+  "italic": false,
+  "smooth": false,
+  "align": 1,
+  "leading": 0,
+  "letterSpacing": 0,
+  "font": "思源黑体",
+  "valign": 1,
+  "shadowEnabled": false,
+  "shadowColor": "#000000",
+  "shadowDx": 1,
+  "shadowDy": 1,
+  "stroke": 0,
+  "strokeColor": "#000000",
+  "showOnEditor": true,
+  "mouseEventEnabledInEditor": true,
+  "materialData": [
+   {
+    "materials": []
+   }
+  ],
+  "index": 5
+ },
+ "skipBox": {
+  "x": 963,
+  "y": 664,
+  "width": 0,
+  "height": 1,
+  "alpha": 1,
+  "posIndex": 1,
+  "posX": 10,
+  "posY": 12,
+  "animationID": 2,
+  "scaleNumber": 1,
+  "playType": 2,
+  "showOnEditor": true,
+  "mouseEventEnabledInEditor": true,
+  "index": 6
+ },
+ "id": 1
+}

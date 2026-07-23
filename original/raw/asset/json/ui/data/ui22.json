@@ -1,0 +1,190 @@
+{
+ "root": {
+  "children": [
+   {
+    "id": "75382713030_0.8207890990259279",
+    "condition": [],
+    "type": "UIBitmap",
+    "name": "图片",
+    "x": -1,
+    "y": 203,
+    "width": 1198,
+    "height": 238,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": [
+       {
+        "id": 3,
+        "strength": 4.81,
+        "____timeInfo": {}
+       }
+      ]
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "image": "asset/image/picture/control/uibitmap.png",
+    "grid9": "0,0,0,0,0",
+    "pivotType": 0
+   },
+   {
+    "id": "75382973050_0.4082110693372516",
+    "condition": [],
+    "type": "UIBitmap",
+    "name": "图片",
+    "x": 229,
+    "y": 215,
+    "width": 142,
+    "height": 210,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "image": "asset/image/picture/object/s5665941.jpg",
+    "grid9": "0,0,0,0,0",
+    "flip": null,
+    "pivotType": 0
+   },
+   {
+    "id": "75383009724_0.3436982814066527",
+    "condition": [],
+    "type": "UIString",
+    "name": "文本",
+    "x": 432,
+    "y": 232,
+    "width": 537,
+    "height": 30,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": false,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "text": "获得了：《数学与猜想》(G·波利亚 著)",
+    "fontSize": 23,
+    "color": "#000000",
+    "bold": false,
+    "italic": false,
+    "align": 0,
+    "valign": 0,
+    "leading": 0,
+    "letterSpacing": 0,
+    "font": "思源黑体",
+    "wordWrap": true,
+    "overflow": 0,
+    "shadowColor": "#000000",
+    "shadowDx": 1,
+    "shadowDy": 1,
+    "stroke": 0,
+    "strokeColor": "#000000"
+   },
+   {
+    "id": "75383097996_0.19668520109178678",
+    "condition": [],
+    "type": "UIString",
+    "name": "文本",
+    "x": 427,
+    "y": 276,
+    "width": 634,
+    "height": 57,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": false,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "text": "《数学与猜想》是著名数学家G. 波利亚撰写的一部经典名著，书中讨论的是自然科学、特别是数学领域中与严密的论证推理完全不同的一种推理方法——合情推理（即猜想）。",
+    "fontSize": 17,
+    "color": "#000000",
+    "bold": false,
+    "italic": false,
+    "align": 0,
+    "valign": 0,
+    "leading": 0,
+    "letterSpacing": 0,
+    "font": "思源黑体",
+    "wordWrap": true,
+    "overflow": 0,
+    "shadowColor": "#000000",
+    "shadowDx": 1,
+    "shadowDy": 1,
+    "stroke": 0,
+    "strokeColor": "#000000"
+   },
+   {
+    "id": "75383154839_0.04223536056092936",
+    "condition": [],
+    "type": "UIString",
+    "name": "文本",
+    "x": 427,
+    "y": 371,
+    "width": 639,
+    "height": 95,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": false,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "text": "一本深绿色封面的小册子，蕴含着古老的数学之力，若是沉溺于此，将难免招致灾难。",
+    "fontSize": 18,
+    "color": "#000000",
+    "bold": false,
+    "italic": false,
+    "smooth": null,
+    "align": 0,
+    "valign": 0,
+    "leading": 0,
+    "letterSpacing": 0,
+    "font": "思源黑体",
+    "wordWrap": true,
+    "overflow": 0,
+    "shadowEnabled": null,
+    "shadowColor": "#000000",
+    "shadowDx": 1,
+    "shadowDy": 1,
+    "stroke": 0,
+    "strokeColor": "#000000",
+    "onChangeFragEvent": null
+   }
+  ]
+ },
+ "id": 22,
+ "hasRootCommand": []
+}

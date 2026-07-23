@@ -1,0 +1,238 @@
+{
+ "root": {
+  "children": [
+   {
+    "id": "61349722264_0.9647871818505533",
+    "condition": [],
+    "type": "UIBitmap",
+    "name": "透明背景",
+    "x": 0,
+    "y": 0,
+    "width": 1200,
+    "height": 720,
+    "opacity": 0,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "image": "asset/image/picture/other/Black.png",
+    "grid9": "0,0,0,0,0",
+    "pivotType": 0
+   },
+   {
+    "id": "51003159775_0.5897146235792083",
+    "condition": [],
+    "type": "UIBitmap",
+    "name": "界面背景",
+    "x": 297.5,
+    "y": 180,
+    "width": 605,
+    "height": 300,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "image": "asset/image/picture/control/uilistBg.png",
+    "grid9": "20,20,20,20,0",
+    "pivotType": 0,
+    "children": [
+     {
+      "id": "51003165165_0.7897561987283472",
+      "condition": [],
+      "type": "UIString",
+      "name": "提示框标题文本",
+      "x": 9,
+      "y": 12,
+      "width": 587,
+      "height": 30,
+      "opacity": 1,
+      "rotation": 0,
+      "show": true,
+      "mouseEventEnabledData": false,
+      "materialData": [
+       {
+        "materials": []
+       }
+      ],
+      "mouseEventEnabledInEditor": true,
+      "showOnEditor": true,
+      "hasCommand": [],
+      "isOpen": true,
+      "text": "$15001",
+      "fontSize": 34,
+      "color": "#3a87e7",
+      "bold": false,
+      "italic": false,
+      "align": 1,
+      "valign": 0,
+      "leading": 0,
+      "letterSpacing": 0,
+      "font": "思源黑体",
+      "wordWrap": true,
+      "overflow": 0,
+      "shadowColor": "#000000",
+      "shadowDx": 1,
+      "shadowDy": 1,
+      "stroke": 0,
+      "strokeColor": "#000000"
+     },
+     {
+      "id": "51003202876_0.863435354190702",
+      "condition": [],
+      "type": "UIString",
+      "name": "提示框内容文本",
+      "x": 35,
+      "y": 61,
+      "width": 535,
+      "height": 152,
+      "opacity": 1,
+      "rotation": 0,
+      "show": true,
+      "mouseEventEnabledData": false,
+      "materialData": [
+       {
+        "materials": []
+       }
+      ],
+      "mouseEventEnabledInEditor": true,
+      "showOnEditor": true,
+      "hasCommand": [],
+      "isOpen": true,
+      "text": "$15002",
+      "fontSize": 24,
+      "color": "#aaaaaa",
+      "bold": false,
+      "italic": false,
+      "align": 0,
+      "valign": 0,
+      "leading": 0,
+      "letterSpacing": 0,
+      "font": "思源黑体",
+      "wordWrap": true,
+      "overflow": 0,
+      "shadowEnabled": null,
+      "shadowColor": "#000000",
+      "shadowDx": 1,
+      "shadowDy": 1,
+      "stroke": 0,
+      "strokeColor": "#000000"
+     }
+    ]
+   },
+   {
+    "id": "51003240067_0.3663873895350629",
+    "condition": [],
+    "type": "UIButton",
+    "name": "确定按钮",
+    "x": 473,
+    "y": 425,
+    "width": 96,
+    "height": 26,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [
+     true,
+     true
+    ],
+    "isOpen": true,
+    "label": "确定",
+    "image1": "asset/image/picture/control/btn_normal.png",
+    "grid9img1": "0,0,0,0,0",
+    "image2": "asset/image/picture/control/btn_over.png",
+    "grid9img2": "0,0,0,0,0",
+    "image3": "asset/image/picture/control/btn_click.png",
+    "grid9img3": "0,0,0,0,0",
+    "fontSize": 16,
+    "color": "#3a87e7",
+    "overColor": "#ff9962",
+    "clickColor": "#ff9962",
+    "bold": false,
+    "italic": false,
+    "align": 1,
+    "valign": 1,
+    "letterSpacing": 0,
+    "font": "思源黑体",
+    "textDx": -10,
+    "textDy": -4,
+    "textStroke": 0,
+    "textStrokeColor": "#000000"
+   },
+   {
+    "id": "51003244386_0.07355925791096474",
+    "condition": [],
+    "type": "UIButton",
+    "name": "取消按钮",
+    "x": 647,
+    "y": 425,
+    "width": 96,
+    "height": 26,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [
+     true,
+     true
+    ],
+    "isOpen": true,
+    "label": "取消",
+    "image1": "asset/image/picture/control/btn_normal.png",
+    "grid9img1": "0,0,0,0,0",
+    "image2": "asset/image/picture/control/btn_over.png",
+    "grid9img2": "0,0,0,0,0",
+    "image3": "asset/image/picture/control/btn_click.png",
+    "grid9img3": "0,0,0,0,0",
+    "fontSize": 16,
+    "color": "#3a87e7",
+    "overColor": "#ff9962",
+    "clickColor": "#ff9962",
+    "bold": false,
+    "italic": false,
+    "align": 1,
+    "valign": 1,
+    "letterSpacing": 0,
+    "font": "思源黑体",
+    "textDx": -10,
+    "textDy": -4,
+    "textStroke": 0,
+    "textStrokeColor": "#000000"
+   }
+  ]
+ },
+ "id": 13,
+ "instanceClassName": "",
+ "hasRootCommand": []
+}

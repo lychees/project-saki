@@ -1,0 +1,15 @@
+{
+ "attrs": {
+  "CGs": {
+   "varType": 7,
+   "value": [
+    "asset/image/picture/titles/Title_1.png",
+    "asset/image/picture/characters/Beaters.png",
+    "asset/image/picture/characters/Yitai.png",
+    "asset/image/picture/characters/SuSu.png"
+   ],
+   "copy": false
+  }
+ },
+ "id": 1
+}

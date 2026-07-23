@@ -1,0 +1,1341 @@
+{
+ "worldAttributeSetting": {
+  "blockList": [
+   {
+    "name": "通用设定",
+    "blockAttrs": [
+     {
+      "attr": {
+       "id": "43469219861_0.5741734966605827",
+       "varName": "其他",
+       "varType": 1,
+       "compData": {
+        "compType": 33,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "",
+       "alias": "其他",
+       "onlyConfig": false,
+       "preview": false,
+       "autoTitleWidth": true,
+       "titleWidth": 100,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 10,
+      "x": 385,
+      "width": 240,
+      "height": 85
+     },
+     {
+      "attr": {
+       "id": "51602572165_0.3952524790455496",
+       "varName": "基本设置",
+       "varType": 1,
+       "compData": {
+        "compType": 33,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "",
+       "alias": "基本设置",
+       "onlyConfig": false,
+       "preview": false,
+       "autoTitleWidth": true,
+       "titleWidth": 100,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 10,
+      "x": 15,
+      "width": 360,
+      "height": 85
+     },
+     {
+      "attr": {
+       "id": "42012254950_0.12783834033791752",
+       "varName": "screenMode",
+       "varType": 0,
+       "compData": {
+        "compType": 2,
+        "compParam": {
+         "items": "自动横屏,自动竖屏",
+         "showIndex": true
+        }
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "",
+       "alias": "移动端屏幕布局模式",
+       "onlyConfig": true,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 125,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 60,
+      "x": 396,
+      "width": 230,
+      "height": 32
+     },
+     {
+      "attr": {
+       "id": "42591509153_0.2124204663084246",
+       "varName": "saveFileMax",
+       "varType": 0,
+       "compData": {
+        "compType": 0,
+        "compParam": {}
+       },
+       "defaultValue": "10",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "",
+       "alias": "存档总数",
+       "onlyConfig": true,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 25,
+      "x": 395,
+      "width": 225,
+      "height": 32
+     },
+     {
+      "attr": {
+       "id": "50869757986_0.25329359124116446",
+       "varName": "bornScene",
+       "varType": 0,
+       "compData": {
+        "compType": 39,
+        "compParam": {
+         "previewScene": false
+        }
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "游戏正式运行时的初始场景",
+       "alias": "游戏初始场景",
+       "onlyConfig": false,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 25,
+      "x": 25,
+      "width": 350,
+      "height": 32
+     },
+     {
+      "attr": {
+       "id": "51047640039_0.8711705118197652",
+       "varName": "dialogRecords",
+       "varType": 3,
+       "compData": {
+        "compType": 0,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": true,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 2,
+       "arrayMode": true,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "",
+       "alias": "对话历史记录",
+       "onlyConfig": false,
+       "preview": false,
+       "autoTitleWidth": true,
+       "titleWidth": 100,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 23,
+      "x": 309,
+      "width": 254,
+      "height": 172
+     },
+     {
+      "attr": {
+       "id": "51050389885_0.7114745075039532",
+       "varName": "myCG",
+       "varType": 4,
+       "compData": {
+        "compType": 1002,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": true,
+       "useCommand": false,
+       "onlyPointTo": true,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": true,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "",
+       "alias": "我的CG鉴赏图集",
+       "onlyConfig": false,
+       "preview": false,
+       "autoTitleWidth": true,
+       "titleWidth": 100,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 13,
+      "x": 644,
+      "width": 267,
+      "height": 225
+     },
+     {
+      "attr": {
+       "id": "51067959712_0.6121396048212022",
+       "varName": "listSelectSE",
+       "varType": 1,
+       "compData": {
+        "compType": 20,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "如用于存档，图鉴列表",
+       "alias": "列表选项选中时音效",
+       "onlyConfig": false,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 60,
+      "x": 25,
+      "width": 350,
+      "height": 32
+     },
+     {
+      "attr": {
+       "id": "66039447544_0.7877697558468011",
+       "varName": "AllProblems",
+       "varType": 5,
+       "compData": {
+        "compType": 0,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "",
+       "alias": "",
+       "onlyConfig": false,
+       "preview": false,
+       "autoTitleWidth": true,
+       "titleWidth": 100,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 0,
+      "x": 0,
+      "width": 200,
+      "height": 32
+     }
+    ],
+    "blockCondition": [],
+    "blockHeight": 110,
+    "autoOrder": true
+   },
+   {
+    "name": "对话事件",
+    "blockAttrs": [
+     {
+      "attr": {
+       "id": "51602869482_0.23544242979371988",
+       "varName": "对话相关事件处理",
+       "varType": 1,
+       "compData": {
+        "compType": 33,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "",
+       "alias": "对话相关事件处理",
+       "onlyConfig": false,
+       "preview": false,
+       "autoTitleWidth": true,
+       "titleWidth": 100,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 10,
+      "x": 15,
+      "width": 745,
+      "height": 120
+     },
+     {
+      "attr": {
+       "id": "50983581629_0.16744760368574108",
+       "varName": "dialogStart",
+       "varType": 1,
+       "compData": {
+        "compType": 35,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "新的一段对话开始显示时触发的事件",
+       "alias": "对话开始时处理",
+       "onlyConfig": false,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 25,
+      "x": 25,
+      "width": 350,
+      "height": 32
+     },
+     {
+      "attr": {
+       "id": "50983659898_0.0067657800904459275",
+       "varName": "dialogEnd",
+       "varType": 1,
+       "compData": {
+        "compType": 35,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "一段对话结束时触发的事件",
+       "alias": "对话结束时处理",
+       "onlyConfig": false,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 25,
+      "x": 410,
+      "width": 350,
+      "height": 32
+     },
+     {
+      "attr": {
+       "id": "50983679346_0.8604716021244925",
+       "varName": "dialogWordPlay",
+       "varType": 1,
+       "compData": {
+        "compType": 35,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "对话文本逐字播放时触发的事件",
+       "alias": "对话文本播放时处理",
+       "onlyConfig": false,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 60,
+      "x": 25,
+      "width": 350,
+      "height": 32
+     },
+     {
+      "attr": {
+       "id": "50983737187_0.4973350328756152",
+       "varName": "dialogWordPlayComplete",
+       "varType": 1,
+       "compData": {
+        "compType": 35,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "对话文本逐字播放完成时触发的事件",
+       "alias": "对话文本播放完成时处理",
+       "onlyConfig": false,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 60,
+      "x": 410,
+      "width": 350,
+      "height": 32
+     },
+     {
+      "attr": {
+       "id": "50983782417_0.051590642957068944",
+       "varName": "dialogTsComplete",
+       "varType": 1,
+       "compData": {
+        "compType": 35,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "跟随对话文本同时播放的语音播放完毕时触发的事件",
+       "alias": "对话语音播放完毕时处理",
+       "onlyConfig": false,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 95,
+      "x": 25,
+      "width": 350,
+      "height": 32
+     }
+    ],
+    "blockCondition": [],
+    "blockHeight": 145,
+    "autoOrder": true
+   },
+   {
+    "name": "启动事件",
+    "blockAttrs": [
+     {
+      "attr": {
+       "id": "43471118825_0.8257683108020604",
+       "varName": "游戏启动事件处理",
+       "varType": 1,
+       "compData": {
+        "compType": 33,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "",
+       "alias": "游戏启动事件处理",
+       "onlyConfig": false,
+       "preview": false,
+       "autoTitleWidth": true,
+       "titleWidth": 100,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 10,
+      "x": 15,
+      "width": 745,
+      "height": 85
+     },
+     {
+      "attr": {
+       "id": "42273816712_0.5335197803713911",
+       "varName": "startupEvent",
+       "varType": 1,
+       "compData": {
+        "compType": 35,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "游戏程序最初启动时的事件处理，此时还未开启新游戏或读取存档。",
+       "alias": "游戏启动时处理",
+       "onlyConfig": true,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 25,
+      "x": 25,
+      "width": 350,
+      "height": 32
+     },
+     {
+      "attr": {
+       "id": "42294721943_0.7793788818197915",
+       "varName": "newGameStartEvent",
+       "varType": 1,
+       "compData": {
+        "compType": 35,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "当进入新游戏时执行的事件处理",
+       "alias": "新游戏开始时处理",
+       "onlyConfig": true,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 60,
+      "x": 25,
+      "width": 350,
+      "height": 32
+     },
+     {
+      "attr": {
+       "id": "42294785252_0.8665173312450589",
+       "varName": "newGameEndEvent",
+       "varType": 1,
+       "compData": {
+        "compType": 35,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "当进入新游戏完成后执行的事件处理",
+       "alias": "新游戏完成时处理",
+       "onlyConfig": true,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 60,
+      "x": 410,
+      "width": 350,
+      "height": 32
+     }
+    ],
+    "blockCondition": [],
+    "blockHeight": 110,
+    "autoOrder": true
+   },
+   {
+    "name": "档案事件",
+    "blockAttrs": [
+     {
+      "attr": {
+       "id": "43471568343_0.6411536056913818",
+       "varName": "存取档相关事件处理",
+       "varType": 1,
+       "compData": {
+        "compType": 33,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "",
+       "alias": "存取档相关事件处理",
+       "onlyConfig": false,
+       "preview": false,
+       "autoTitleWidth": true,
+       "titleWidth": 100,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 10,
+      "x": 15,
+      "width": 1130,
+      "height": 85
+     },
+     {
+      "attr": {
+       "id": "42608300477_0.44219910124695283",
+       "varName": "loadGameStartEvent",
+       "varType": 1,
+       "compData": {
+        "compType": 35,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "当读取存档时的事件处理",
+       "alias": "读取存档开始时处理",
+       "onlyConfig": true,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 25,
+      "x": 25,
+      "width": 350,
+      "height": 32
+     },
+     {
+      "attr": {
+       "id": "42608300477_0.24748764008895652",
+       "varName": "loadGameEndEvent",
+       "varType": 1,
+       "compData": {
+        "compType": 35,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "当载入档案完成时的事件处理",
+       "alias": "读取存档完成时处理",
+       "onlyConfig": true,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 25,
+      "x": 410,
+      "width": 350,
+      "height": 32
+     },
+     {
+      "attr": {
+       "id": "42608300477_0.525465105158978",
+       "varName": "loadGameFailEvent",
+       "varType": 1,
+       "compData": {
+        "compType": 35,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "当读取存档失败时的事件处理",
+       "alias": "读档失败时处理",
+       "onlyConfig": true,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 25,
+      "x": 795,
+      "width": 350,
+      "height": 32
+     },
+     {
+      "attr": {
+       "id": "42608300477_0.8571043474163673",
+       "varName": "saveSuccessEvent",
+       "varType": 1,
+       "compData": {
+        "compType": 35,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "当存档成功后的事件处理",
+       "alias": "存档成功时处理",
+       "onlyConfig": true,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 60,
+      "x": 25,
+      "width": 350,
+      "height": 32
+     },
+     {
+      "attr": {
+       "id": "42608300477_0.3544656072367445",
+       "varName": "saveFailEvent",
+       "varType": 1,
+       "compData": {
+        "compType": 35,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "当存档失败时的事件处理",
+       "alias": "存档失败时处理",
+       "onlyConfig": true,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 59,
+      "x": 410,
+      "width": 350,
+      "height": 32
+     }
+    ],
+    "blockCondition": [],
+    "blockHeight": 110,
+    "autoOrder": true
+   },
+   {
+    "name": "切换场景事件",
+    "blockAttrs": [
+     {
+      "attr": {
+       "id": "43472519134_0.4767217239664532",
+       "varName": "切换场景的事件处理",
+       "varType": 1,
+       "compData": {
+        "compType": 33,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "",
+       "alias": "切换场景的事件处理",
+       "onlyConfig": false,
+       "preview": false,
+       "autoTitleWidth": true,
+       "titleWidth": 100,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 10,
+      "x": 15,
+      "width": 745,
+      "height": 50
+     },
+     {
+      "attr": {
+       "id": "42298874977_0.7432011625177233",
+       "varName": "inSceneLoadCompleteEvent",
+       "varType": 1,
+       "compData": {
+        "compType": 35,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "当更换场景时进入到新场景后的事件处理",
+       "alias": "进入场景时事件",
+       "onlyConfig": true,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 25,
+      "x": 25,
+      "width": 350,
+      "height": 32
+     },
+     {
+      "attr": {
+       "id": "42298874977_0.7049999063885009",
+       "varName": "leaveSceneEvent",
+       "varType": 1,
+       "compData": {
+        "compType": 35,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "当更换场景时即将进入新场景前的事件处理",
+       "alias": "离开场景时事件",
+       "onlyConfig": true,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 25,
+      "x": 410,
+      "width": 350,
+      "height": 32
+     }
+    ],
+    "blockCondition": [],
+    "blockHeight": 75,
+    "autoOrder": true
+   },
+   {
+    "name": "初始化事件",
+    "blockAttrs": [
+     {
+      "attr": {
+       "id": "43472706492_0.8196715054721508",
+       "varName": "初始化",
+       "varType": 1,
+       "compData": {
+        "compType": 33,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "",
+       "alias": "初始化",
+       "onlyConfig": false,
+       "preview": false,
+       "autoTitleWidth": true,
+       "titleWidth": 100,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 10,
+      "x": 15,
+      "width": 360,
+      "height": 50
+     },
+     {
+      "attr": {
+       "id": "42610179300_0.7929924668863244",
+       "varName": "gameInitEvent",
+       "varType": 1,
+       "compData": {
+        "compType": 35,
+        "compParam": {}
+       },
+       "defaultValue": "",
+       "hideMode": false,
+       "useCommand": false,
+       "onlyPointTo": false,
+       "moduleID": 1,
+       "dataStructureID": 1,
+       "arrayMode": false,
+       "arrayLength": 100,
+       "arrayAllowDelete": false,
+       "arrayAllowSwap": false,
+       "arrayAllowUpdate": false,
+       "accessMode": 1,
+       "syncMode": 0,
+       "attrTips": "首次登入游戏场景后执行的一次性事件（无论通过新游戏或读取存档时都会调用）",
+       "alias": "游戏初始化处理",
+       "onlyConfig": true,
+       "preview": false,
+       "autoTitleWidth": false,
+       "titleWidth": 150,
+       "eyeShow": true,
+       "lockBlock": false
+      },
+      "attrConditions": [],
+      "y": 25,
+      "x": 25,
+      "width": 350,
+      "height": 32
+     }
+    ],
+    "blockCondition": [],
+    "blockHeight": 75,
+    "autoOrder": true
+   }
+  ],
+  "compAutoOrderLimitHeight": 0
+ },
+ "playerAttributeSetting": {
+  "blockList": [
+   {
+    "name": "玩家属性",
+    "blockAttrs": [],
+    "blockCondition": [],
+    "blockHeight": 360,
+    "autoOrder": true,
+    "hideBlockTitle": false
+   }
+  ]
+ },
+ "worldAttributeConfig": {
+  "attrs": {
+   "screenMode": {
+    "varType": 0,
+    "value": 0,
+    "copy": false
+   },
+   "startupEvent": {
+    "varType": 1,
+    "value": "进入标题界面\u000565694873453_0.6245974028393722\u0005[[10001,{\"42010122135_0.24848401267879283\":[{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":0,\"asset3\":0,\"asset4\":0,\"asset5\":1,\"asset6\":0,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":2,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":6,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":11,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":2002,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":2003,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":2004,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":7,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":1,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":1,\"asset0\":\"\",\"asset1\":\"asset/audio/bgm/Title.mp3,1,1\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":1,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]}],\"42275874449_0.28161324216600425\":true,\"42275552693_0.09151993166059103\":\"loadingComp\",\"42275565858_0.9925963744814135\":\"value\",\"42275863488_0.8715139966044176\":2001},\"50820721089_0.0850562472097296\"],[40010,{\"49809728719_0.046619702255007\":0,\"24538808102_0.9970934946254328\":1,\"49612012650_0.7509974095572418\":1,\"24538808435_0.6230939565765392\":1,\"49518385245_0.9308839798952664\":1,\"50689082740_0.526404642451832\":false,\"49141521249_0.2965750598394892\":0,\"49519573910_0.08853124862540018\":1,\"49141521416_0.0884961804795068\":0,\"49519590084_0.3058131165318816\":1,\"49150249927_0.6881795527970145\":100,\"49519636189_0.2521948025226537\":1,\"49232462793_0.7622411974016037\":1,\"49520636693_0.8404154506260593\":1,\"49232464582_0.12430969584603324\":1,\"49520744730_0.6026838995761481\":1,\"49232999716_0.2133484967243402\":0,\"49520812848_0.5734967173507821\":1,\"49234813142_0.3142568229981375\":1,\"49520873912_0.5927053372462527\":1,\"49599648354_0.3738368266485066\":false,\"49518248081_0.4367396293869368\":false,\"49599660535_0.0823572381286597\":1,\"49518318443_0.5988810162565685\":false,\"49519399740_0.07229930251623617\":false,\"49519436070_0.9418611019894294\":false,\"49519475735_0.9428268094401824\":false,\"49519529748_0.519982170810438\":false,\"49520771123_0.27311479097864666\":false,\"49611947752_0.41521729946538755\":false},\"51060447155_0.8089298947674226\"],[63,\"asset/audio/bgm/3(2).mp3\",1,1,0,{\"___cmdID\":\"50820721089_0.35182598985234237\"}],[18,\"//------------------------------------------------------------------------------------------------------\\n// 快捷键关闭界面\\n//------------------------------------------------------------------------------------------------------\",{\"___cmdID\":\"51093753473_0.5970414052925823\"}],[10003,{\"42612293498_0.480752728811654\":0,\"43114340537_0.8908961983320582\":0,\"50863734368_0.9019421681699644\":false,\"43114858493_0.09543223886965402\":27,\"43114858493_0.3171744305791697\":0,\"43114653398_0.8881147052471978\":[],\"43114873548_0.23450080376522942\":0,\"43116389200_0.5571849278665717\":false,\"43116402659_0.5042655137768752\":false,\"43116419156_0.632745028317159\":false,\"42612627174_0.578758902506004\":\"标题界面中关闭读档界面\\u000551093763942_0.07949724126570001\\u0005[[16,15004,false,{\\\"___cmdID\\\":\\\"51060659958_0.598755326011511\\\"}]]\",\"50863905972_0.3771312559501221\":1},\"51093753473_0.8344959153688676\"],[10004,{\"42616483455_0.4639772550758601\":0,\"42616489134_0.7730466615484748\":4,\"42616655343_0.8231014458198378\":\"标题界面中关闭读档界面\\u000551060685847_0.5687274154150752\\u0005[[16,15004,false,{\\\"___cmdID\\\":\\\"51060679909_0.9434309477771847\\\"}]]\",\"42875522865_0.10960228539938566\":false,\"50865172217_0.9666233269585383\":1},\"51093753473_0.009722471649976194\"]]",
+    "copy": false
+   },
+   "newGameStartEvent": {
+    "varType": 1,
+    "value": "游戏开始载入效果\u000551764752929_0.9797914300781612\u0005[[64,1,{\"___cmdID\":\"51610544484_0.2585963667995226\"}],[40010,{\"49809728719_0.046619702255007\":0,\"24538808102_0.9970934946254328\":1,\"49612012650_0.7509974095572418\":1,\"24538808435_0.6230939565765392\":2002,\"49518385245_0.9308839798952664\":1,\"50689082740_0.526404642451832\":true,\"49141521249_0.2965750598394892\":0,\"49519573910_0.08853124862540018\":1,\"49141521416_0.0884961804795068\":0,\"49519590084_0.3058131165318816\":1,\"49150249927_0.6881795527970145\":100,\"49519636189_0.2521948025226537\":1,\"49232462793_0.7622411974016037\":1,\"49520636693_0.8404154506260593\":1,\"49232464582_0.12430969584603324\":1,\"49520744730_0.6026838995761481\":1,\"49232999716_0.2133484967243402\":0,\"49520812848_0.5734967173507821\":1,\"49234813142_0.3142568229981375\":0,\"49520873912_0.5927053372462527\":1,\"49599648354_0.3738368266485066\":false,\"49518248081_0.4367396293869368\":false,\"49599660535_0.0823572381286597\":1,\"49518318443_0.5988810162565685\":false,\"49519399740_0.07229930251623617\":false,\"49519436070_0.9418611019894294\":false,\"49519475735_0.9428268094401824\":false,\"49519529748_0.519982170810438\":false,\"49520771123_0.27311479097864666\":false,\"49611947752_0.41521729946538755\":false},\"50821104555_0.4168157113574522\"],[40011,{\"49816072304_0.03131954665076897\":0,\"24538808102_0.9970934946254328\":1,\"49612329479_0.7433565589142674\":1,\"49819012242_0.02527395671440269\":2002,\"49819012242_0.4964322333365434\":1,\"49541474395_0.999063634948089\":1,\"49541474395_0.4302897217422976\":10,\"49541474396_0.5364167299087121\":\"\",\"49141521249_0.2965750598394892\":0,\"49519573910_0.08853124862540018\":1,\"49141521416_0.0884961804795068\":0,\"49519590084_0.3058131165318816\":1,\"49150249927_0.6881795527970145\":100,\"49519636189_0.2521948025226537\":1,\"49232462793_0.7622411974016037\":1,\"49520636693_0.8404154506260593\":1,\"49232464582_0.12430969584603324\":1,\"49520744730_0.6026838995761481\":1,\"49232999716_0.2133484967243402\":0,\"49520812848_0.5734967173507821\":1,\"49234813142_0.3142568229981375\":1,\"49520873912_0.5927053372462527\":1,\"49594771755_0.963684096315716\":false,\"49518248081_0.4367396293869368\":false,\"49595153167_0.8002073773406164\":1,\"49519399740_0.07229930251623617\":false,\"49519436070_0.9418611019894294\":false,\"49519475735_0.9428268094401824\":false,\"49519529748_0.519982170810438\":false,\"49520771123_0.27311479097864666\":false,\"49612315725_0.0667574286485002\":false,\"49819116159_0.3898830536514881\":false},\"50821104555_0.9362636879594082\"],[17,10,0,false,{\"___cmdID\":\"50821104555_0.09870060579831397\"}],[40012,{\"49821564836_0.18023666032094843\":0,\"49821564836_0.05613902618903355\":1,\"49821564836_0.6578043100778947\":1,\"49821564836_0.7286666716958285\":1,\"49821564836_0.40792780858788147\":1,\"49821586470_0.8966191069628267\":false,\"49821586470_0.5086891336665356\":false},\"51724193148_0.8729019903996107\"],[10001,{\"42010122135_0.24848401267879283\":[{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":0,\"asset3\":0,\"asset4\":0,\"asset5\":4,\"asset6\":0,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":3,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":5,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":7,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":8,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":9,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]}],\"42275874449_0.28161324216600425\":false,\"42275552693_0.09151993166059103\":\"loadingComp\",\"42275565858_0.9925963744814135\":\"value\",\"42275863488_0.8715139966044176\":2001},\"51074605966_0.1591821205007149\"]]",
+    "copy": false
+   },
+   "newGameEndEvent": {
+    "varType": 1,
+    "value": "新游戏载入完成事件\u000558075532020_0.4029700676646999\u0005[[40010,{\"49809728719_0.046619702255007\":0,\"24538808102_0.9970934946254328\":1,\"49612012650_0.7509974095572418\":1,\"24538808435_0.6230939565765392\":2002,\"49518385245_0.9308839798952664\":1,\"50689082740_0.526404642451832\":true,\"49141521249_0.2965750598394892\":0,\"49519573910_0.08853124862540018\":1,\"49141521416_0.0884961804795068\":0,\"49519590084_0.3058131165318816\":1,\"49150249927_0.6881795527970145\":100,\"49519636189_0.2521948025226537\":1,\"49232462793_0.7622411974016037\":1,\"49520636693_0.8404154506260593\":1,\"49232464582_0.12430969584603324\":1,\"49520744730_0.6026838995761481\":1,\"49232999716_0.2133484967243402\":0,\"49520812848_0.5734967173507821\":1,\"49234813142_0.3142568229981375\":1,\"49520873912_0.5927053372462527\":1,\"49599648354_0.3738368266485066\":false,\"49518248081_0.4367396293869368\":false,\"49599660535_0.0823572381286597\":1,\"49518318443_0.5988810162565685\":false,\"49519399740_0.07229930251623617\":false,\"49519436070_0.9418611019894294\":false,\"49519475735_0.9428268094401824\":false,\"49519529748_0.519982170810438\":false,\"49520771123_0.27311479097864666\":false,\"49611947752_0.41521729946538755\":false},\"50821139874_0.8323114613443454\"],[40011,{\"49816072304_0.03131954665076897\":0,\"24538808102_0.9970934946254328\":1,\"49612329479_0.7433565589142674\":1,\"49819012242_0.02527395671440269\":2002,\"49819012242_0.4964322333365434\":1,\"49541474395_0.999063634948089\":1,\"49541474395_0.4302897217422976\":10,\"49541474396_0.5364167299087121\":\"\",\"49141521249_0.2965750598394892\":0,\"49519573910_0.08853124862540018\":1,\"49141521416_0.0884961804795068\":0,\"49519590084_0.3058131165318816\":1,\"49150249927_0.6881795527970145\":100,\"49519636189_0.2521948025226537\":1,\"49232462793_0.7622411974016037\":1,\"49520636693_0.8404154506260593\":1,\"49232464582_0.12430969584603324\":1,\"49520744730_0.6026838995761481\":1,\"49232999716_0.2133484967243402\":0,\"49520812848_0.5734967173507821\":1,\"49234813142_0.3142568229981375\":0,\"49520873912_0.5927053372462527\":1,\"49594771755_0.963684096315716\":false,\"49518248081_0.4367396293869368\":false,\"49595153167_0.8002073773406164\":1,\"49519399740_0.07229930251623617\":false,\"49519436070_0.9418611019894294\":false,\"49519475735_0.9428268094401824\":false,\"49519529748_0.519982170810438\":false,\"49520771123_0.27311479097864666\":false,\"49612315725_0.0667574286485002\":false,\"49819116159_0.3898830536514881\":false},\"50821139874_0.152629819353562\"],[17,10,0,false,{\"___cmdID\":\"50821139874_0.4034334205712984\"}],[40012,{\"49821564836_0.18023666032094843\":0,\"49821564836_0.05613902618903355\":1,\"49821564836_0.6578043100778947\":1,\"49821564836_0.7286666716958285\":2002,\"49821564836_0.40792780858788147\":1,\"49821586470_0.8966191069628267\":false,\"49821586470_0.5086891336665356\":false},\"50821207148_0.24064188568891454\"]]",
+    "copy": false
+   },
+   "loadGameStartEvent": {
+    "varType": 1,
+    "value": "读档开始载入效果\u000551765589099_0.736869573364541\u0005[[40011,{\"49816072304_0.03131954665076897\":0,\"24538808102_0.9970934946254328\":1,\"49612329479_0.7433565589142674\":1,\"49819012242_0.02527395671440269\":2,\"49819012242_0.4964322333365434\":1,\"49541474395_0.999063634948089\":1,\"49541474395_0.4302897217422976\":20,\"49541474396_0.5364167299087121\":\"{\\\"transType\\\":1,\\\"loopType\\\":0,\\\"timeType\\\":0,\\\"timeUnit\\\":1,\\\"totalTime\\\":2,\\\"tweenType\\\":11,\\\"tweenTypeName\\\":\\\"strongOut\\\",\\\"curveData\\\":[[0,0,0,99,1,1,1,3],[0,100,100]],\\\"refreshInterval\\\":16}\",\"49141521249_0.2965750598394892\":0,\"49519573910_0.08853124862540018\":1,\"49141521416_0.0884961804795068\":-720,\"49519590084_0.3058131165318816\":1,\"49150249927_0.6881795527970145\":100,\"49519636189_0.2521948025226537\":1,\"49232462793_0.7622411974016037\":1,\"49520636693_0.8404154506260593\":1,\"49232464582_0.12430969584603324\":1,\"49520744730_0.6026838995761481\":1,\"49232999716_0.2133484967243402\":0,\"49520812848_0.5734967173507821\":1,\"49234813142_0.3142568229981375\":1,\"49520873912_0.5927053372462527\":1,\"49594771755_0.963684096315716\":false,\"49518248081_0.4367396293869368\":false,\"49595153167_0.8002073773406164\":0,\"49519399740_0.07229930251623617\":false,\"49519436070_0.9418611019894294\":false,\"49519475735_0.9428268094401824\":false,\"49519529748_0.519982170810438\":false,\"49520771123_0.27311479097864666\":false,\"49612315725_0.0667574286485002\":false,\"49819116159_0.3898830536514881\":false},\"51065251306_0.9897869388818408\"],[17,15,0,false,{\"___cmdID\":\"51065251306_0.7756178252483164\"}],[40010,{\"49809728719_0.046619702255007\":0,\"24538808102_0.9970934946254328\":1,\"49612012650_0.7509974095572418\":1,\"24538808435_0.6230939565765392\":2003,\"49518385245_0.9308839798952664\":1,\"50689082740_0.526404642451832\":true,\"49141521249_0.2965750598394892\":0,\"49519573910_0.08853124862540018\":1,\"49141521416_0.0884961804795068\":0,\"49519590084_0.3058131165318816\":1,\"49150249927_0.6881795527970145\":100,\"49519636189_0.2521948025226537\":1,\"49232462793_0.7622411974016037\":1,\"49520636693_0.8404154506260593\":1,\"49232464582_0.12430969584603324\":1,\"49520744730_0.6026838995761481\":1,\"49232999716_0.2133484967243402\":0,\"49520812848_0.5734967173507821\":1,\"49234813142_0.3142568229981375\":0,\"49520873912_0.5927053372462527\":1,\"49599648354_0.3738368266485066\":false,\"49518248081_0.4367396293869368\":false,\"49599660535_0.0823572381286597\":1,\"49518318443_0.5988810162565685\":false,\"49519399740_0.07229930251623617\":false,\"49519436070_0.9418611019894294\":false,\"49519475735_0.9428268094401824\":false,\"49519529748_0.519982170810438\":false,\"49520771123_0.27311479097864666\":false,\"49611947752_0.41521729946538755\":false},\"51065251306_0.734181224170372\"],[40011,{\"49816072304_0.03131954665076897\":0,\"24538808102_0.9970934946254328\":1,\"49612329479_0.7433565589142674\":1,\"49819012242_0.02527395671440269\":2003,\"49819012242_0.4964322333365434\":1,\"49541474395_0.999063634948089\":1,\"49541474395_0.4302897217422976\":30,\"49541474396_0.5364167299087121\":\"\",\"49141521249_0.2965750598394892\":0,\"49519573910_0.08853124862540018\":1,\"49141521416_0.0884961804795068\":0,\"49519590084_0.3058131165318816\":1,\"49150249927_0.6881795527970145\":100,\"49519636189_0.2521948025226537\":1,\"49232462793_0.7622411974016037\":1,\"49520636693_0.8404154506260593\":1,\"49232464582_0.12430969584603324\":1,\"49520744730_0.6026838995761481\":1,\"49232999716_0.2133484967243402\":0,\"49520812848_0.5734967173507821\":1,\"49234813142_0.3142568229981375\":1,\"49520873912_0.5927053372462527\":1,\"49594771755_0.963684096315716\":false,\"49518248081_0.4367396293869368\":false,\"49595153167_0.8002073773406164\":1,\"49519399740_0.07229930251623617\":false,\"49519436070_0.9418611019894294\":false,\"49519475735_0.9428268094401824\":false,\"49519529748_0.519982170810438\":false,\"49520771123_0.27311479097864666\":false,\"49612315725_0.0667574286485002\":false,\"49819116159_0.3898830536514881\":false},\"51065251306_0.8622862590208742\"],[17,30,0,false,{\"___cmdID\":\"51065251306_0.10496467945686994\"}],[40012,{\"49821564836_0.18023666032094843\":0,\"49821564836_0.05613902618903355\":1,\"49821564836_0.6578043100778947\":1,\"49821564836_0.7286666716958285\":1,\"49821564836_0.40792780858788147\":1,\"49821586470_0.8966191069628267\":false,\"49821586470_0.5086891336665356\":false},\"51065251306_0.6846324592074469\"],[40011,{\"49816072304_0.03131954665076897\":0,\"24538808102_0.9970934946254328\":1,\"49612329479_0.7433565589142674\":1,\"49819012242_0.02527395671440269\":2,\"49819012242_0.4964322333365434\":1,\"49541474395_0.999063634948089\":0,\"49541474395_0.4302897217422976\":30,\"49541474396_0.5364167299087121\":\"\",\"49141521249_0.2965750598394892\":0,\"49519573910_0.08853124862540018\":1,\"49141521416_0.0884961804795068\":0,\"49519590084_0.3058131165318816\":1,\"49150249927_0.6881795527970145\":100,\"49519636189_0.2521948025226537\":1,\"49232462793_0.7622411974016037\":1,\"49520636693_0.8404154506260593\":1,\"49232464582_0.12430969584603324\":1,\"49520744730_0.6026838995761481\":1,\"49232999716_0.2133484967243402\":0,\"49520812848_0.5734967173507821\":1,\"49234813142_0.3142568229981375\":1,\"49520873912_0.5927053372462527\":1,\"49594771755_0.963684096315716\":false,\"49518248081_0.4367396293869368\":false,\"49595153167_0.8002073773406164\":0,\"49519399740_0.07229930251623617\":false,\"49519436070_0.9418611019894294\":false,\"49519475735_0.9428268094401824\":false,\"49519529748_0.519982170810438\":false,\"49520771123_0.27311479097864666\":false,\"49612315725_0.0667574286485002\":false,\"49819116159_0.3898830536514881\":false},\"51065251306_0.2240430942348155\"],[40012,{\"49821564836_0.18023666032094843\":0,\"49821564836_0.05613902618903355\":1,\"49821564836_0.6578043100778947\":1,\"49821564836_0.7286666716958285\":2,\"49821564836_0.40792780858788147\":1,\"49821586470_0.8966191069628267\":false,\"49821586470_0.5086891336665356\":false},\"51065251306_0.7698853198592903\"],[10001,{\"42010122135_0.24848401267879283\":[{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":0,\"asset3\":0,\"asset4\":0,\"asset5\":4,\"asset6\":0,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":3,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":5,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":7,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":8,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":5,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":9,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]},{\"assetType\":7,\"asset0\":\"\",\"asset1\":\"\",\"asset2\":1,\"asset3\":1,\"asset4\":1,\"asset5\":1,\"asset6\":1,\"assetTypeItems\":[\"图片\",\"音频\",\"行走图\",\"立绘\",\"动画\",\"界面\",\"对话框样式\",\"预设字体\",\"CG图鉴\"]}],\"42275874449_0.28161324216600425\":false,\"42275552693_0.09151993166059103\":\"loadingComp\",\"42275565858_0.9925963744814135\":\"value\",\"42275863488_0.8715139966044176\":2001},\"51074814451_0.9697860434923022\"]]",
+    "copy": false
+   },
+   "loadGameEndEvent": {
+    "varType": 1,
+    "value": "读档载入完成事件\u000551611824502_0.4332391948972141\u0005[[40012,{\"49821564836_0.18023666032094843\":0,\"49821564836_0.05613902618903355\":1,\"49821564836_0.6578043100778947\":1,\"49821564836_0.7286666716958285\":5,\"49821564836_0.40792780858788147\":1,\"49821586470_0.8966191069628267\":false,\"49821586470_0.5086891336665356\":false},\"51065644033_0.2624400173945354\"],[40012,{\"49821564836_0.18023666032094843\":0,\"49821564836_0.05613902618903355\":1,\"49821564836_0.6578043100778947\":1,\"49821564836_0.7286666716958285\":1,\"49821564836_0.40792780858788147\":1,\"49821586470_0.8966191069628267\":false,\"49821586470_0.5086891336665356\":false},\"50863068087_0.7246319695822769\"],[40012,{\"49821564836_0.18023666032094843\":0,\"49821564836_0.05613902618903355\":1,\"49821564836_0.6578043100778947\":1,\"49821564836_0.7286666716958285\":2,\"49821564836_0.40792780858788147\":1,\"49821586470_0.8966191069628267\":false,\"49821586470_0.5086891336665356\":false},\"50863109758_0.5366808170812061\"],[40011,{\"49816072304_0.03131954665076897\":0,\"24538808102_0.9970934946254328\":1,\"49612329479_0.7433565589142674\":1,\"49819012242_0.02527395671440269\":2003,\"49819012242_0.4964322333365434\":1,\"49541474395_0.999063634948089\":1,\"49541474395_0.4302897217422976\":30,\"49541474396_0.5364167299087121\":\"{\\\"transType\\\":1,\\\"loopType\\\":0,\\\"timeType\\\":0,\\\"timeUnit\\\":1,\\\"totalTime\\\":2,\\\"tweenType\\\":11,\\\"tweenTypeName\\\":\\\"strongOut\\\",\\\"curveData\\\":[[0,0,0,99,1,1,1,3],[0,100,100]],\\\"refreshInterval\\\":16}\",\"49141521249_0.2965750598394892\":0,\"49519573910_0.08853124862540018\":1,\"49141521416_0.0884961804795068\":0,\"49519590084_0.3058131165318816\":1,\"49150249927_0.6881795527970145\":100,\"49519636189_0.2521948025226537\":1,\"49232462793_0.7622411974016037\":1,\"49520636693_0.8404154506260593\":1,\"49232464582_0.12430969584603324\":1,\"49520744730_0.6026838995761481\":1,\"49232999716_0.2133484967243402\":0,\"49520812848_0.5734967173507821\":1,\"49234813142_0.3142568229981375\":0,\"49520873912_0.5927053372462527\":1,\"49594771755_0.963684096315716\":false,\"49518248081_0.4367396293869368\":false,\"49595153167_0.8002073773406164\":0,\"49519399740_0.07229930251623617\":false,\"49519436070_0.9418611019894294\":false,\"49519475735_0.9428268094401824\":false,\"49519529748_0.519982170810438\":false,\"49520771123_0.27311479097864666\":false,\"49612315725_0.0667574286485002\":false,\"49819116159_0.3898830536514881\":false},\"51065571066_0.4353803827173117\"],[17,30,0,false,{\"___cmdID\":\"51065609899_0.577157328524986\"}],[40012,{\"49821564836_0.18023666032094843\":0,\"49821564836_0.05613902618903355\":1,\"49821564836_0.6578043100778947\":1,\"49821564836_0.7286666716958285\":2003,\"49821564836_0.40792780858788147\":1,\"49821586470_0.8966191069628267\":false,\"49821586470_0.5086891336665356\":false},\"51065628534_0.5592628671360065\"]]",
+    "copy": false
+   },
+   "inSceneLoadCompleteEvent": {
+    "varType": 1,
+    "value": "进入场景过渡效果\u000551724326839_0.43552163577394754\u0005[[40010,{\"49809728719_0.046619702255007\":0,\"24538808102_0.9970934946254328\":1,\"49612012650_0.7509974095572418\":1,\"24538808435_0.6230939565765392\":2004,\"49518385245_0.9308839798952664\":1,\"50689082740_0.526404642451832\":false,\"49141521249_0.2965750598394892\":0,\"49519573910_0.08853124862540018\":1,\"49141521416_0.0884961804795068\":0,\"49519590084_0.3058131165318816\":1,\"49150249927_0.6881795527970145\":100,\"49519636189_0.2521948025226537\":1,\"49232462793_0.7622411974016037\":1,\"49520636693_0.8404154506260593\":1,\"49232464582_0.12430969584603324\":1,\"49520744730_0.6026838995761481\":1,\"49232999716_0.2133484967243402\":0,\"49520812848_0.5734967173507821\":1,\"49234813142_0.3142568229981375\":1,\"49520873912_0.5927053372462527\":1,\"49599648354_0.3738368266485066\":false,\"49518248081_0.4367396293869368\":false,\"49599660535_0.0823572381286597\":1,\"49518318443_0.5988810162565685\":false,\"49519399740_0.07229930251623617\":false,\"49519436070_0.9418611019894294\":false,\"49519475735_0.9428268094401824\":false,\"49519529748_0.519982170810438\":false,\"49520771123_0.27311479097864666\":false,\"49611947752_0.41521729946538755\":false},\"51066205429_0.5222441425586879\"],[40011,{\"49816072304_0.03131954665076897\":0,\"24538808102_0.9970934946254328\":1,\"49612329479_0.7433565589142674\":1,\"49819012242_0.02527395671440269\":2004,\"49819012242_0.4964322333365434\":1,\"49541474395_0.999063634948089\":1,\"49541474395_0.4302897217422976\":10,\"49541474396_0.5364167299087121\":\"\",\"49141521249_0.2965750598394892\":0,\"49519573910_0.08853124862540018\":1,\"49141521416_0.0884961804795068\":0,\"49519590084_0.3058131165318816\":1,\"49150249927_0.6881795527970145\":100,\"49519636189_0.2521948025226537\":1,\"49232462793_0.7622411974016037\":1,\"49520636693_0.8404154506260593\":1,\"49232464582_0.12430969584603324\":1,\"49520744730_0.6026838995761481\":1,\"49232999716_0.2133484967243402\":0,\"49520812848_0.5734967173507821\":1,\"49234813142_0.3142568229981375\":0,\"49520873912_0.5927053372462527\":1,\"49594771755_0.963684096315716\":false,\"49518248081_0.4367396293869368\":false,\"49595153167_0.8002073773406164\":0,\"49519399740_0.07229930251623617\":false,\"49519436070_0.9418611019894294\":false,\"49519475735_0.9428268094401824\":false,\"49519529748_0.519982170810438\":false,\"49520771123_0.27311479097864666\":false,\"49612315725_0.0667574286485002\":false,\"49819116159_0.3898830536514881\":false},\"51066133760_0.9746100157006163\"],[15,\"新的事件片段\",true,[[17,10,0,false,{\"___cmdID\":\"51066273132_0.199797103189997\"}],[40012,{\"49821564836_0.18023666032094843\":0,\"49821564836_0.05613902618903355\":1,\"49821564836_0.6578043100778947\":1,\"49821564836_0.7286666716958285\":2004,\"49821564836_0.40792780858788147\":1,\"49821586470_0.8966191069628267\":false,\"49821586470_0.5086891336665356\":false},\"51066271583_0.5359108353835089\"]],\"51066265080_0.25373424979398784\",{\"___cmdID\":\"51066265080_0.11836215529545924\"}]]",
+    "copy": false
+   },
+   "leaveSceneEvent": {
+    "varType": 1,
+    "value": "离开场景过渡效果\u000551611831938_0.8389162821988385\u0005[[40010,{\"49809728719_0.046619702255007\":0,\"24538808102_0.9970934946254328\":1,\"49612012650_0.7509974095572418\":1,\"24538808435_0.6230939565765392\":2004,\"49518385245_0.9308839798952664\":1,\"50689082740_0.526404642451832\":true,\"49141521249_0.2965750598394892\":0,\"49519573910_0.08853124862540018\":1,\"49141521416_0.0884961804795068\":0,\"49519590084_0.3058131165318816\":1,\"49150249927_0.6881795527970145\":100,\"49519636189_0.2521948025226537\":1,\"49232462793_0.7622411974016037\":1,\"49520636693_0.8404154506260593\":1,\"49232464582_0.12430969584603324\":1,\"49520744730_0.6026838995761481\":1,\"49232999716_0.2133484967243402\":0,\"49520812848_0.5734967173507821\":1,\"49234813142_0.3142568229981375\":0,\"49520873912_0.5927053372462527\":1,\"49599648354_0.3738368266485066\":false,\"49518248081_0.4367396293869368\":false,\"49599660535_0.0823572381286597\":1,\"49518318443_0.5988810162565685\":false,\"49519399740_0.07229930251623617\":false,\"49519436070_0.9418611019894294\":false,\"49519475735_0.9428268094401824\":false,\"49519529748_0.519982170810438\":false,\"49520771123_0.27311479097864666\":false,\"49611947752_0.41521729946538755\":false},\"51066082695_0.038185053755379395\"],[40011,{\"49816072304_0.03131954665076897\":0,\"24538808102_0.9970934946254328\":1,\"49612329479_0.7433565589142674\":1,\"49819012242_0.02527395671440269\":2004,\"49819012242_0.4964322333365434\":1,\"49541474395_0.999063634948089\":1,\"49541474395_0.4302897217422976\":10,\"49541474396_0.5364167299087121\":\"\",\"49141521249_0.2965750598394892\":0,\"49519573910_0.08853124862540018\":1,\"49141521416_0.0884961804795068\":0,\"49519590084_0.3058131165318816\":1,\"49150249927_0.6881795527970145\":100,\"49519636189_0.2521948025226537\":1,\"49232462793_0.7622411974016037\":1,\"49520636693_0.8404154506260593\":1,\"49232464582_0.12430969584603324\":1,\"49520744730_0.6026838995761481\":1,\"49232999716_0.2133484967243402\":0,\"49520812848_0.5734967173507821\":1,\"49234813142_0.3142568229981375\":1,\"49520873912_0.5927053372462527\":1,\"49594771755_0.963684096315716\":false,\"49518248081_0.4367396293869368\":false,\"49595153167_0.8002073773406164\":0,\"49519399740_0.07229930251623617\":false,\"49519436070_0.9418611019894294\":false,\"49519475735_0.9428268094401824\":false,\"49519529748_0.519982170810438\":false,\"49520771123_0.27311479097864666\":false,\"49612315725_0.0667574286485002\":false,\"49819116159_0.3898830536514881\":false},\"51066113446_0.8768446371972489\"],[17,10,0,false,{\"___cmdID\":\"51066124877_0.06662616492834172\"}]]",
+    "copy": false
+   },
+   "saveFileMax": {
+    "varType": 0,
+    "value": 12,
+    "copy": false
+   },
+   "loadGameFailEvent": {
+    "varType": 1,
+    "value": "读档失败处理\u000551611822068_0.2947714247655262\u0005[[67,\"asset/audio/se/menu/Disable_1.mp3\",1,1,{\"___cmdID\":\"51611821269_0.6495892598634128\"}],[13,5,15001,0,0,\"系统提示\",1,1,[0,100],0,-1,[],0,0,0,{\"___cmdID\":\"51065811072_0.28501034025411753\"}],[13,5,15002,0,0,\"读取存档发生错误，可能文件已损坏。\",1,1,[0,100],0,-1,[],0,0,0,{\"___cmdID\":\"51065811072_0.8949647300088617\"}],[13,3,15004,0,0,0,1,1,[0,100],0,-1,[],0,0,0,{\"___cmdID\":\"51065811072_0.6596505464663449\"}],[40010,{\"49809728719_0.046619702255007\":0,\"24538808102_0.9970934946254328\":1,\"49612012650_0.7509974095572418\":1,\"24538808435_0.6230939565765392\":13,\"49518385245_0.9308839798952664\":1,\"50689082740_0.526404642451832\":false,\"49141521249_0.2965750598394892\":0,\"49519573910_0.08853124862540018\":1,\"49141521416_0.0884961804795068\":0,\"49519590084_0.3058131165318816\":1,\"49150249927_0.6881795527970145\":100,\"49519636189_0.2521948025226537\":1,\"49232462793_0.7622411974016037\":1,\"49520636693_0.8404154506260593\":1,\"49232464582_0.12430969584603324\":1,\"49520744730_0.6026838995761481\":1,\"49232999716_0.2133484967243402\":0,\"49520812848_0.5734967173507821\":1,\"49234813142_0.3142568229981375\":1,\"49520873912_0.5927053372462527\":1,\"49599648354_0.3738368266485066\":false,\"49518248081_0.4367396293869368\":false,\"49599660535_0.0823572381286597\":1,\"49518318443_0.5988810162565685\":false,\"49519399740_0.07229930251623617\":false,\"49519436070_0.9418611019894294\":false,\"49519475735_0.9428268094401824\":false,\"49519529748_0.519982170810438\":false,\"49520771123_0.27311479097864666\":false,\"49611947752_0.41521729946538755\":false},\"51065811072_0.02725168611133655\"]]",
+    "copy": false
+   },
+   "saveSuccessEvent": {
+    "varType": 1,
+    "value": "存档成功音效\u000551611827036_0.10847311342520771\u0005[[67,\"asset/audio/se/menu/Save.mp3\",1,1]]",
+    "copy": false
+   },
+   "saveFailEvent": {
+    "varType": 1,
+    "value": "存档失败提示\u000551611813985_0.9847844408751583\u0005[[67,\"asset/audio/se/menu/Disable_1.mp3\",1,1,{\"___cmdID\":\"51611801324_0.9946545941954168\"}],[13,5,15001,0,0,\"系统提示\",1,1,[0,100],0,-1,[],0,0,0,{\"___cmdID\":\"51065889027_0.3705565525766614\"}],[13,5,15002,0,0,\"储存失败!\",1,1,[0,100],0,-1,[],0,0,0,{\"___cmdID\":\"51065889027_0.8327939837220504\"}],[13,3,15004,0,0,0,1,1,[0,100],0,-1,[],0,0,0,{\"___cmdID\":\"51065889027_0.13568283943418336\"}],[40010,{\"49809728719_0.046619702255007\":0,\"24538808102_0.9970934946254328\":1,\"49612012650_0.7509974095572418\":1,\"24538808435_0.6230939565765392\":13,\"49518385245_0.9308839798952664\":1,\"50689082740_0.526404642451832\":false,\"49141521249_0.2965750598394892\":0,\"49519573910_0.08853124862540018\":1,\"49141521416_0.0884961804795068\":0,\"49519590084_0.3058131165318816\":1,\"49150249927_0.6881795527970145\":100,\"49519636189_0.2521948025226537\":1,\"49232462793_0.7622411974016037\":1,\"49520636693_0.8404154506260593\":1,\"49232464582_0.12430969584603324\":1,\"49520744730_0.6026838995761481\":1,\"49232999716_0.2133484967243402\":0,\"49520812848_0.5734967173507821\":1,\"49234813142_0.3142568229981375\":1,\"49520873912_0.5927053372462527\":1,\"49599648354_0.3738368266485066\":false,\"49518248081_0.4367396293869368\":false,\"49599660535_0.0823572381286597\":1,\"49518318443_0.5988810162565685\":false,\"49519399740_0.07229930251623617\":false,\"49519436070_0.9418611019894294\":false,\"49519475735_0.9428268094401824\":false,\"49519529748_0.519982170810438\":false,\"49520771123_0.27311479097864666\":false,\"49611947752_0.41521729946538755\":false},\"51065889027_0.6943290243904185\"]]",
+    "copy": false
+   },
+   "gameInitEvent": {
+    "varType": 1,
+    "value": "游戏初始化\u000558075778488_0.8112462123417525\u0005[[18,\"//------------------------------------------------------------------------------------------------------\\n// 初始化设定\\n//------------------------------------------------------------------------------------------------------\",{\"___cmdID\":\"51002135848_0.2850462228702897\"}],[18,\"//------------------------------------------------------------------------------------------------------\\n// CTRL 快捷键快进\\n//------------------------------------------------------------------------------------------------------\",{\"___cmdID\":\"51002124147_0.06937739984893532\"}],[10003,{\"42612293498_0.480752728811654\":0,\"43114340537_0.8908961983320582\":0,\"50863734368_0.9019421681699644\":false,\"43114858493_0.09543223886965402\":17,\"43114858493_0.3171744305791697\":0,\"43114653398_0.8881147052471978\":[],\"43114873548_0.23450080376522942\":0,\"43116389200_0.5571849278665717\":false,\"43116402659_0.5042655137768752\":false,\"43116419156_0.632745028317159\":false,\"42612627174_0.578758902506004\":\"快进ON\\u000551049429047_0.6687673059959558\\u0005[[0,1,0,[0,1,1,0],0,0,[0,1,1,0],0,[15001,15007,[0,0]],0,0,[1,1],\\\"\\\",\\\"\\\",false,null,null,null,null,null,null,0,{\\\"___cmdID\\\":\\\"51006605912_0.5171972916118543\\\"}],[0,5,0,[0,1,1,0],0,0,[0,1,1,0],0,[1,1,[0,0]],0,0,[1,1],\\\"\\\",\\\"\\\",true,null,[5,{\\\"sys\\\":4},[{\\\"50994129090_0.9145624693624452\\\":4}]],null,null,null,null,0,{\\\"___cmdID\\\":\\\"51006605912_0.06276189269680188\\\"}],[1,{\\\"___cmdID\\\":\\\"51006704991_0.7753766680247465\\\"}],[13,4,15004,0,0,0,1,1,[0,100],0,-1,[],0,0,0,{\\\"___cmdID\\\":\\\"51049244372_0.4818273507246664\\\"}],[14,{\\\"___cmdID\\\":\\\"51006713363_0.5665086771218879\\\"}],[2,{\\\"___cmdID\\\":\\\"51006605912_0.221329616674385\\\"}],[2,{\\\"___cmdID\\\":\\\"51006605912_0.3226541413671047\\\"}],[13,4,15004,0,0,1,1,1,[0,100],0,-1,[],0,0,0,{\\\"___cmdID\\\":\\\"51002169953_0.27650989706986384\\\"}],[20002,null,\\\"51002227057_0.23302124595499407\\\"],[20001,null,\\\"51002228418_0.5696355037709839\\\"]]\",\"50863905972_0.3771312559501221\":1},\"51002174954_0.1008505470812644\"],[10003,{\"42612293498_0.480752728811654\":0,\"43114340537_0.8908961983320582\":0,\"50863734368_0.9019421681699644\":false,\"43114858493_0.09543223886965402\":17,\"43114858493_0.3171744305791697\":1,\"43114653398_0.8881147052471978\":[],\"43114873548_0.23450080376522942\":0,\"43116389200_0.5571849278665717\":false,\"43116402659_0.5042655137768752\":false,\"43116419156_0.632745028317159\":false,\"42612627174_0.578758902506004\":\"快进OFF\\u000551002197679_0.7901882400376146\\u0005[[13,4,15004,0,0,0,1,1,[0,100],0,-1,[],0,0,0,{\\\"___cmdID\\\":\\\"51002169953_0.27650989706986384\\\"}]]\",\"50863905972_0.3771312559501221\":1},\"51002176298_0.733208333035311\"],[18,\"//------------------------------------------------------------------------------------------------------\\n// CTRL 快捷键空格播放文本\\n//------------------------------------------------------------------------------------------------------\",{\"___cmdID\":\"51002260655_0.2708737026792394\"}],[10003,{\"42612293498_0.480752728811654\":0,\"43114340537_0.8908961983320582\":0,\"50863734368_0.9019421681699644\":false,\"43114858493_0.09543223886965402\":32,\"43114858493_0.3171744305791697\":1,\"43114653398_0.8881147052471978\":[],\"43114873548_0.23450080376522942\":0,\"43116389200_0.5571849278665717\":false,\"43116402659_0.5042655137768752\":false,\"43116419156_0.632745028317159\":false,\"42612627174_0.578758902506004\":\"显示全部文本或跳过\\u000551002324162_0.25222102824215686\\u0005[[0,5,0,[0,1,1,0],0,0,[0,1,1,0],0,[1,1,[0,0]],0,0,[1,1],\\\"\\\",\\\"\\\",false,null,[5,{\\\"sys\\\":0},[{\\\"50994129090_0.9145624693624452\\\":0}]],null,null,null,null,0,{\\\"___cmdID\\\":\\\"51002295542_0.4809774859110141\\\"}],[0,5,0,[0,1,1,0],0,0,[0,1,1,0],0,[1,1,[0,0]],0,0,[1,1],\\\"\\\",\\\"\\\",true,null,[5,{\\\"sys\\\":1},[{\\\"50994129090_0.9145624693624452\\\":1}]],null,null,null,null,0,{\\\"___cmdID\\\":\\\"51002302023_0.48523957753921243\\\"}],[20002,null,\\\"51002321560_0.3929136888560758\\\"],[1,{\\\"___cmdID\\\":\\\"51002315126_0.10200198290772367\\\"}],[20001,null,\\\"51002322912_0.44458905818102523\\\"],[2,{\\\"___cmdID\\\":\\\"51002309911_0.49868303062669006\\\"}],[2,{\\\"___cmdID\\\":\\\"51002300326_0.8064288633051555\\\"}]]\",\"50863905972_0.3771312559501221\":1},\"51002279210_0.6392169573151918\"],[18,\"//------------------------------------------------------------------------------------------------------\\n// 滚轮操作：历史记录以及播放文本\\n//------------------------------------------------------------------------------------------------------\",{\"___cmdID\":\"51716971191_0.23331206030461904\"}],[10004,{\"42616483455_0.4639772550758601\":0,\"42616489134_0.7730466615484748\":7,\"42616655343_0.8231014458198378\":\"\\u000558075589936_0.943075528079419\\u0005[[0,4,0,[0,1,1,0],0,0,[0,1,1,0],0,[1,1,[0,0]],0,0,[1,1],\\\"\\\",\\\"\\\",false,null,[4,{\\\"checkType\\\":0,\\\"uiIDVarID\\\":1,\\\"uiID\\\":3,\\\"useVarID\\\":0,\\\"type\\\":4,\\\"uiComp\\\":{}},[{\\\"57914579909_0.31596273488182147\\\":0,\\\"42668749327_0.5044332572445289\\\":1,\\\"42662223132_0.13407162179315324\\\":3,\\\"42668749764_0.405507816846465\\\":0,\\\"42668805260_0.7826262589690147\\\":4,\\\"57914519062_0.2382390483738146\\\":{}}]],null,null,null,null,0,0,[0,{},\\\"\\\"],[0,{},\\\"\\\"],{\\\"___cmdID\\\":\\\"51717011287_0.5989751569424935\\\"}],[0,0,4,[0,1,1,0],1,0,[0,1,1,0],0,[1,1,[0,0]],0,0,[1,1],\\\"\\\",\\\"\\\",true,null,null,[2,{\\\"type\\\":2},[{\\\"42659087992_0.8295512812431562\\\":2}]],null,null,null,0,{\\\"___cmdID\\\":\\\"51717024477_0.8058155291032449\\\"}],[40010,{\\\"49809728719_0.046619702255007\\\":0,\\\"24538808102_0.9970934946254328\\\":1,\\\"49612012650_0.7509974095572418\\\":1,\\\"24538808435_0.6230939565765392\\\":4,\\\"49518385245_0.9308839798952664\\\":1,\\\"50689082740_0.526404642451832\\\":false,\\\"49141521249_0.2965750598394892\\\":0,\\\"49519573910_0.08853124862540018\\\":1,\\\"49141521416_0.0884961804795068\\\":0,\\\"49519590084_0.3058131165318816\\\":1,\\\"49150249927_0.6881795527970145\\\":100,\\\"49519636189_0.2521948025226537\\\":1,\\\"49232462793_0.7622411974016037\\\":1,\\\"49520636693_0.8404154506260593\\\":1,\\\"49232464582_0.12430969584603324\\\":1,\\\"49520744730_0.6026838995761481\\\":1,\\\"49232999716_0.2133484967243402\\\":0,\\\"49520812848_0.5734967173507821\\\":1,\\\"49234813142_0.3142568229981375\\\":1,\\\"49520873912_0.5927053372462527\\\":1,\\\"49599648354_0.3738368266485066\\\":false,\\\"49518248081_0.4367396293869368\\\":false,\\\"49599660535_0.0823572381286597\\\":1,\\\"49518318443_0.5988810162565685\\\":false,\\\"49519399740_0.07229930251623617\\\":false,\\\"49519436070_0.9418611019894294\\\":false,\\\"49519475735_0.9428268094401824\\\":false,\\\"49519529748_0.519982170810438\\\":false,\\\"49520771123_0.27311479097864666\\\":false,\\\"49611947752_0.41521729946538755\\\":false},\\\"51717099126_0.5336274076350209\\\"],[40014,{\\\"49825113823_0.7745949272019663\\\":2,\\\"49897660694_0.39897478951731946\\\":false,\\\"49897660694_0.6399331644068169\\\":1,\\\"49897660694_0.0946225960666689\\\":1,\\\"49897706791_0.8101580703633997\\\":false,\\\"49897693777_0.31957312098050794\\\":4,\\\"49897693777_0.39600212789547196\\\":1,\\\"49904671869_0.1506235712026469\\\":[{\\\"materials\\\":[{\\\"id\\\":10,\\\"mask\\\":\\\"asset/image/picture/rule/19.jpg\\\",\\\"useTrans\\\":true,\\\"time\\\":0,\\\"trans\\\":\\\"{\\\\\\\"transType\\\\\\\":2,\\\\\\\"loopType\\\\\\\":0,\\\\\\\"timeType\\\\\\\":1,\\\\\\\"timeUnit\\\\\\\":1,\\\\\\\"totalTime\\\\\\\":30,\\\\\\\"tweenType\\\\\\\":4,\\\\\\\"tweenTypeName\\\\\\\":\\\\\\\"backInOut\\\\\\\",\\\\\\\"curveData\\\\\\\":[[0,0,100,99,1,1,1,3],[0,100,0]],\\\\\\\"refreshInterval\\\\\\\":16}\\\",\\\"vagueness\\\":0.25,\\\"invertMask\\\":0,\\\"____timeInfo\\\":{\\\"trans\\\":30}}]}]},\\\"51717122463_0.9366613467847664\\\"],[1,{\\\"___cmdID\\\":\\\"51717037942_0.19731842966441238\\\"}],[18,\\\"//------------------------------------------------------------------------------------------------------\\\\n// 滚轮操作：显示文本\\\\n//------------------------------------------------------------------------------------------------------\\\",{\\\"___cmdID\\\":\\\"51717072243_0.7364790306695574\\\"}],[0,5,0,[0,1,1,0],0,0,[0,1,1,0],0,[1,1,[0,0]],0,0,[1,1],\\\"\\\",\\\"\\\",false,null,[5,{\\\"sys\\\":0},[{\\\"50994129090_0.9145624693624452\\\":0}]],null,null,null,null,0,{\\\"___cmdID\\\":\\\"51717050349_0.07604771465790416\\\"}],[0,5,0,[0,1,1,0],0,0,[0,1,1,0],0,[1,1,[0,0]],0,0,[1,1],\\\"\\\",\\\"\\\",true,null,[5,{\\\"sys\\\":1},[{\\\"50994129090_0.9145624693624452\\\":1}]],null,null,null,null,0,{\\\"___cmdID\\\":\\\"51717050349_0.8212529919873228\\\"}],[20002,null,\\\"51717050349_0.7147269520086144\\\"],[1,{\\\"___cmdID\\\":\\\"51717050349_0.06219983932972384\\\"}],[20001,null,\\\"51717050349_0.5124114308961221\\\"],[2,{\\\"___cmdID\\\":\\\"51717050349_0.6137592830588332\\\"}],[2,{\\\"___cmdID\\\":\\\"51717050349_0.7454824088487995\\\"}],[2,{\\\"___cmdID\\\":\\\"51717034825_0.4349509522516444\\\"}],[2,{\\\"___cmdID\\\":\\\"51717021573_0.06054836511648998\\\"}]]\",\"42875522865_0.10960228539938566\":false,\"50865172217_0.9666233269585383\":1},\"51717043012_0.5414571808166373\"]]",
+    "copy": false
+   },
+   "其他": {
+    "varType": 1,
+    "value": "",
+    "copy": false
+   },
+   "游戏启动事件处理": {
+    "varType": 1,
+    "value": "",
+    "copy": false
+   },
+   "存取档相关事件处理": {
+    "varType": 1,
+    "value": "",
+    "copy": false
+   },
+   "初始化": {
+    "varType": 1,
+    "value": "",
+    "copy": false
+   },
+   "bornScene": {
+    "varType": 0,
+    "value": 10,
+    "copy": false
+   },
+   "dialogStart": {
+    "varType": 1,
+    "value": "对话开始时处理\u000551002016402_0.030012098019914557\u0005[[40010,{\"49809728719_0.046619702255007\":0,\"24538808102_0.9970934946254328\":1,\"49612012650_0.7509974095572418\":1,\"24538808435_0.6230939565765392\":3,\"49518385245_0.9308839798952664\":1,\"50689082740_0.526404642451832\":false,\"49141521249_0.2965750598394892\":0,\"49519573910_0.08853124862540018\":1,\"49141521416_0.0884961804795068\":0,\"49519590084_0.3058131165318816\":1,\"49150249927_0.6881795527970145\":100,\"49519636189_0.2521948025226537\":1,\"49232462793_0.7622411974016037\":1,\"49520636693_0.8404154506260593\":1,\"49232464582_0.12430969584603324\":1,\"49520744730_0.6026838995761481\":1,\"49232999716_0.2133484967243402\":0,\"49520812848_0.5734967173507821\":1,\"49234813142_0.3142568229981375\":1,\"49520873912_0.5927053372462527\":1,\"49599648354_0.3738368266485066\":false,\"49518248081_0.4367396293869368\":false,\"49599660535_0.0823572381286597\":1,\"49518318443_0.5988810162565685\":false,\"49519399740_0.07229930251623617\":false,\"49519436070_0.9418611019894294\":false,\"49519475735_0.9428268094401824\":false,\"49519529748_0.519982170810438\":false,\"49520771123_0.27311479097864666\":false,\"49611947752_0.41521729946538755\":false},\"50993905000_0.5435912698157275\"],[13,4,15001,0,0,0,1,1,[0,100],0,-1,[],0,0,0,{\"___cmdID\":\"50997257299_0.7408339605931216\"}],[13,4,15002,0,0,0,1,1,[0,100],0,-1,[],0,0,0,{\"___cmdID\":\"50997262945_0.4104398300637906\"}],[13,3,15001,1,0,1,1,1,[0,100],0,-1,[],0,0,0,{\"___cmdID\":\"50997635193_0.09517588663706844\"}],[0,1,0,[0,1,1,0],0,0,[0,1,1,0],1,[1,15004,[0,0]],0,0,[1,1],\"\",\"\",false,null,null,null,null,null,null,0,{\"___cmdID\":\"51001295718_0.5381596256322592\"}],[13,3,15003,0,2,1,1,15001,[0,100],0,-1,[],0,0,0,{\"___cmdID\":\"51001397512_0.020589700114766796\"}],[17,1,0,false,{\"___cmdID\":\"51001442576_0.42148547213301124\"}],[0,1,0,[0,1,1,0],0,0,[0,1,1,0],1,[1,15004,[0,0]],0,0,[1,1],\"\",\"\",false,null,null,null,null,null,null,0,{\"___cmdID\":\"51001454408_0.7747977463170834\"}],[0,0,2,[0,1,15003,0],0,2,[0,1,15001,0],0,[1,1,[0,0]],0,0,[1,1],\"\",\"\",false,null,null,null,null,null,null,0,{\"___cmdID\":\"51001457676_0.4602119684335766\"}],[20002,null,\"51002015511_0.5880206711102556\"],[2,{\"___cmdID\":\"51001465213_0.16026583248799087\"}],[2,{\"___cmdID\":\"51001454408_0.8584405207788279\"}],[2,{\"___cmdID\":\"51001311801_0.4717618138702544\"}]]",
+    "copy": false
+   },
+   "dialogEnd": {
+    "varType": 1,
+    "value": "对话结束跳过时处理\u000551060406035_0.8230676423752876\u0005[[40012,{\"49821564836_0.18023666032094843\":0,\"49821564836_0.05613902618903355\":1,\"49821564836_0.6578043100778947\":1,\"49821564836_0.7286666716958285\":3,\"49821564836_0.40792780858788147\":1,\"49821586470_0.8966191069628267\":false,\"49821586470_0.5086891336665356\":false},\"50995393134_0.3567791595668408\"]]",
+    "copy": false
+   },
+   "dialogWordPlay": {
+    "varType": 1,
+    "value": "对话文本逐字播放时处理\u000566177133877_0.8757537884923974\u0005[]",
+    "copy": false
+   },
+   "dialogWordPlayComplete": {
+    "varType": 1,
+    "value": "对话文本播放完毕时处理\u000551060390266_0.11320345627215489\u0005[[13,4,15001,0,0,1,1,1,[0,100],0,-1,[],0,0,0,{\"___cmdID\":\"50997294357_0.49656290923832724\"}],[16,15001,false,{\"___cmdID\":\"50997294357_0.29911013970586886\"}]]",
+    "copy": false
+   },
+   "dialogTsComplete": {
+    "varType": 1,
+    "value": "对话语音播放完毕时处理\u000551060417567_0.7636143738971208\u0005[[13,4,15002,0,0,1,1,1,[0,100],0,-1,[],0,0,0,{\"___cmdID\":\"50997283080_0.555554682749319\"}],[16,15001,false,{\"___cmdID\":\"50997288971_0.07719456678486769\"}]]",
+    "copy": false
+   },
+   "dialogRecords": {
+    "varType": 9,
+    "value": [],
+    "copy": false
+   },
+   "myCG": {
+    "varType": 6,
+    "value": [],
+    "copy": false
+   },
+   "listSelectSE": {
+    "varType": 1,
+    "value": "asset/audio/se/menu/Get.mp3,1,1",
+    "copy": false,
+    "volume": "1",
+    "pitch": "1"
+   },
+   "切换场景的事件处理": {
+    "varType": 1,
+    "value": "",
+    "copy": false
+   },
+   "基本设置": {
+    "varType": 1,
+    "value": "",
+    "copy": false
+   },
+   "对话相关事件处理": {
+    "varType": 1,
+    "value": "",
+    "copy": false
+   },
+   "AllProblems": {
+    "varType": 12,
+    "value": {},
+    "copy": false
+   }
+  }
+ },
+ "playerAttributeConfig": {
+  "attrs": {}
+ }
+}

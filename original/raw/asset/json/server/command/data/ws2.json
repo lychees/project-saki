@@ -1,0 +1,304 @@
+{
+ "allowClient": false,
+ "conditionSwitch": 1,
+ "updateMode": false,
+ "commands": [
+  [
+   10002,
+   {
+    "42750841751_0.7637689700671215": 7,
+    "42751317345_0.8284247410455201": "",
+    "52239559085_0.6078129335285596": 0,
+    "52239646251_0.415165137716486": 1
+   },
+   "66470928349_0.8312438738190444"
+  ],
+  [
+   13,
+   5,
+   2,
+   0,
+   0,
+   "[@p0]",
+   1,
+   1,
+   [
+    0,
+    100
+   ],
+   0,
+   -1,
+   [],
+   0,
+   0,
+   0,
+   null,
+   false,
+   {
+    "___cmdID": "66471441003_0.2748344020078548"
+   }
+  ],
+  [
+   20,
+   "Test chat",
+   "// 当前的事件触发器：trigger: CommandTrigger;\nconst ur = new HttpRequest();\nconst input: string = Game.player.variable.getString(2);\n\n// vjudge API\nur.send('https://test.rct.ai/z', JSON.stringify({\n    number: 1,\n    length: 90,\n    top_p: 0.4,\n    temperature: 0.8,\n    prompt: input,\n}), 'post', 'json', [\"Content-Type\", \"application/json\"]);\n\nur.on(EventObject.COMPLETE, this, (content) => {\n    Game.player.variable.setString(3, content.result[0].replace(/^[\\s,]+/, '').replace(/(.{30})/g, \"$1\\n\"));\n    Game.player.variable.setVariable(2, 1);\n});\n\nur.on(EventObject.ERROR, this, (error: string) => {\n    // request is error flag\n    Game.player.variable.setVariable(2, 2);\n});\n",
+   "var ur = new HttpRequest();\nvar input = Game.player.variable.getString(2);\nur.send('https://test.rct.ai/z', JSON.stringify({\n    number: 1,\n    length: 90,\n    top_p: 0.4,\n    temperature: 0.8,\n    prompt: input,\n}), 'post', 'json', [\"Content-Type\", \"application/json\"]);\nur.on(EventObject.COMPLETE, this, function (content) {\n    Game.player.variable.setString(3, content.result[0].replace(/^[\\s,]+/, '').replace(/(.{30})/g, \"$1\\n\"));\n    Game.player.variable.setVariable(2, 1);\n});\nur.on(EventObject.ERROR, this, function (error) {\n    Game.player.variable.setVariable(2, 2);\n});\n",
+   {
+    "___cmdID": "66471316350_0.895653326395184"
+   }
+  ],
+  [
+   5,
+   {
+    "___cmdID": "66470928349_0.4843336376795353"
+   }
+  ],
+  [
+   0,
+   0,
+   2,
+   [
+    0,
+    1,
+    2,
+    0
+   ],
+   0,
+   0,
+   [
+    1,
+    1,
+    1,
+    0
+   ],
+   0,
+   [
+    1,
+    1,
+    [
+     0,
+     0
+    ]
+   ],
+   0,
+   1,
+   [
+    1,
+    2
+   ],
+   "true",
+   "",
+   true,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   0,
+   0,
+   [
+    0,
+    {},
+    ""
+   ],
+   [
+    0,
+    {},
+    ""
+   ],
+   {
+    "___cmdID": "66470928349_0.4559983764599447"
+   }
+  ],
+  [
+   11,
+   3,
+   3,
+   "OnePlus",
+   3,
+   -3,
+   "<span style='color:#FfFffF'>[@s3]</span>",
+   null,
+   1,
+   0,
+   {
+    "___cmdID": "66473221540_0.13127188448159632"
+   }
+  ],
+  [
+   13,
+   3,
+   2,
+   0,
+   0,
+   0,
+   1,
+   1,
+   [
+    0,
+    100
+   ],
+   0,
+   -1,
+   [],
+   0,
+   0,
+   0,
+   {
+    "___cmdID": "66470928349_0.8598108861214258"
+   }
+  ],
+  [
+   7,
+   {
+    "___cmdID": "66470928349_0.9043462090332617"
+   }
+  ],
+  [
+   1,
+   {
+    "___cmdID": "66470928349_0.25705779786569605"
+   }
+  ],
+  [
+   0,
+   0,
+   2,
+   [
+    0,
+    1,
+    2,
+    0
+   ],
+   0,
+   0,
+   [
+    2,
+    1,
+    1,
+    0
+   ],
+   0,
+   [
+    1,
+    1,
+    [
+     0,
+     0
+    ]
+   ],
+   0,
+   0,
+   [
+    1,
+    1
+   ],
+   "",
+   "",
+   false,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   0,
+   0,
+   [
+    0,
+    {},
+    ""
+   ],
+   [
+    0,
+    {},
+    ""
+   ],
+   {
+    "___cmdID": "66470928349_0.4933198617198058"
+   }
+  ],
+  [
+   13,
+   3,
+   2,
+   0,
+   0,
+   0,
+   1,
+   1,
+   [
+    0,
+    100
+   ],
+   0,
+   -1,
+   [],
+   0,
+   0,
+   0,
+   {
+    "___cmdID": "66470928349_0.6564013716757953"
+   }
+  ],
+  [
+   7,
+   {
+    "___cmdID": "66470928349_0.6873927694226198"
+   }
+  ],
+  [
+   2,
+   {
+    "___cmdID": "66470928349_0.7959586834247656"
+   }
+  ],
+  [
+   11,
+   1,
+   null,
+   "",
+   1,
+   -3,
+   "<span style='color:#FfFffF'>获取数据中…需要稍等数秒……[p50]</span>",
+   null,
+   1,
+   0,
+   {
+    "___cmdID": "66473120279_0.753516842455515"
+   }
+  ],
+  [
+   17,
+   60,
+   0,
+   false,
+   {
+    "___cmdID": "66470928349_0.0944487660424782"
+   }
+  ],
+  [
+   2,
+   {
+    "___cmdID": "66470928349_0.6984412527417823"
+   }
+  ],
+  [
+   6,
+   {
+    "___cmdID": "66470928349_0.024520670851042814"
+   }
+  ],
+  [
+   17,
+   60,
+   0,
+   false,
+   {
+    "___cmdID": "66470928349_0.3352335581379635"
+   }
+  ]
+ ],
+ "id": 2
+}

@@ -1,0 +1,118 @@
+{
+ "root": {
+  "children": [
+   {
+    "id": "51316633045_0.11517022124885523",
+    "condition": [],
+    "type": "UIBitmap",
+    "name": "图片",
+    "x": 364,
+    "y": 240,
+    "width": 472,
+    "height": 240,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "image": "asset/image/picture/control/uilistBg.png",
+    "grid9": "0,0,0,0,0",
+    "pivotType": 0
+   },
+   {
+    "id": "51698664353_0.8649440401794284",
+    "condition": [],
+    "type": "UIButton",
+    "name": "按钮",
+    "x": 547,
+    "y": 421,
+    "width": 96,
+    "height": 26,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": true,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [
+     true
+    ],
+    "isOpen": true,
+    "label": "关闭",
+    "image1": "asset/image/picture/control/btn_normal.png",
+    "grid9img1": "0,0,0,0,0",
+    "image2": "asset/image/picture/control/btn_over.png",
+    "grid9img2": "0,0,0,0,0",
+    "image3": "asset/image/picture/control/btn_click.png",
+    "grid9img3": "0,0,0,0,0",
+    "fontSize": 16,
+    "color": "#3a87e7",
+    "bold": false,
+    "italic": false,
+    "align": 1,
+    "valign": 1,
+    "letterSpacing": 0,
+    "font": "宋体",
+    "textDx": -10,
+    "textDy": -4,
+    "textStroke": 0,
+    "textStrokeColor": "#000000"
+   },
+   {
+    "id": "51698682206_0.6632534120854165",
+    "condition": [],
+    "type": "UIString",
+    "name": "文本",
+    "x": 465,
+    "y": 320,
+    "width": 281,
+    "height": 35,
+    "opacity": 1,
+    "rotation": 0,
+    "show": true,
+    "mouseEventEnabledData": false,
+    "materialData": [
+     {
+      "materials": []
+     }
+    ],
+    "mouseEventEnabledInEditor": true,
+    "showOnEditor": true,
+    "hasCommand": [],
+    "isOpen": true,
+    "text": "尝试创建自己的界面并动态的添加到你想要出现的剧情位置",
+    "fontSize": 16,
+    "color": "#000000",
+    "bold": false,
+    "italic": false,
+    "align": 0,
+    "valign": 0,
+    "leading": 0,
+    "letterSpacing": 0,
+    "font": "思源黑体",
+    "wordWrap": true,
+    "overflow": 0,
+    "shadowColor": "#000000",
+    "shadowDx": 1,
+    "shadowDy": 1,
+    "stroke": 0,
+    "strokeColor": "#000000"
+   }
+  ]
+ },
+ "id": 3001,
+ "instanceClassName": ""
+}
