@@ -48,6 +48,7 @@ init python:
         ("系统", [
             ("章节选择菜单", "chapter_select"),
             ("未实装提示卡示例（Week-1 Day-6）", "stub_16"),
+            ("竞技场模式", "arena_setup"),
         ]),
     ]
 

@@ -301,6 +301,8 @@ screen navigation():
 
             textbutton _("Start") action Start()
 
+            textbutton "竞技场" action Start("arena_setup")
+
             if persistent.dev_mode:
                 textbutton "开发者跳转" action Show("dev_jump")
 
