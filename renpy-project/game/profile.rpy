@@ -393,6 +393,10 @@ screen player_profile_screen():
 screen profile_empty_screen():
     modal True
     add Solid("#0d1117")
+
+    # 绑定完成后自动进入主面板（Show 模式的绑定面板不阻塞此界面）
+    timer 0.5 repeat True action If(_profile_bound_any(), true=Return("bound"), false=NullAction())
+
     frame:
         align (0.5, 0.5)
         padding (50, 36)
@@ -410,7 +414,8 @@ label player_profile:
 
     if not _profile_bound_any():
         call screen profile_empty_screen
-        return
+        if _return != "bound":
+            return
 
     label player_profile_main:
         if not persistent.profile_data:
